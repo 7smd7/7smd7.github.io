@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad Daryani | Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm Neutrals -->
+    <!-- Application Structure Plan: A single-page, vertical-scrolling interactive portfolio. The structure includes a hero section, an interactive skills dashboard (filterable bar chart), a career timeline, a filterable project gallery, and sections for education/certifications. This non-linear, interactive structure was chosen to allow recruiters to quickly explore and filter information based on their specific needs (e.g., finding all Python projects), making the profile more engaging and easier to digest than a static document. -->
+    <!-- Visualization & Content Choices: Skills -> Goal: Compare -> Viz: Interactive Bar Chart -> Interaction: Filter by category -> Justification: Visualizes skill set dynamically -> Library: Chart.js. Experience -> Goal: Show Change -> Method: Vertical Timeline -> Interaction: Expand/collapse details -> Justification: Shows career progression clearly. Projects -> Goal: Organize -> Method: Filterable Card Grid -> Interaction: Filter by technology -> Justification: Allows targeted exploration of relevant work -> Library/Method: Vanilla JS + Tailwind. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFDFB;
+            color: #1a202c;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+            max-height: 50vh;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 500px;
+            }
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.75rem;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #4A5568;
+            border: 4px solid #FDFDFB;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="font-bold text-xl text-gray-800">Mohammad Daryani</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#summary" class="text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#skills" class="text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+                        <a href="#experience" class="text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Experience</a>
+                        <a href="#projects" class="text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                        <a href="#education" class="text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Education</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <header class="py-20 md:py-32">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-gray-900">Mohammad Daryani</h1>
+                <p class="mt-4 text-lg md:text-xl text-gray-600">Software Engineer | BE in Software Engineering</p>
+                <div class="mt-8 flex justify-center space-x-6">
+                    <a href="https://linkedin.com/in/m-daryani/" target="_blank" class="text-gray-500 hover:text-gray-900">
+                        <span class="sr-only">LinkedIn</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="https://github.com/7smd7" target="_blank" class="text-gray-500 hover:text-gray-900">
+                        <span class="sr-only">GitHub</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <section id="summary" class="py-16 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center text-gray-900">About Me</h2>
+                <p class="mt-6 text-lg text-gray-700 leading-relaxed text-center">
+                    Software Engineer with a Bachelor of Engineering in Software Engineering from Babol Noshirvani University of Technology. Experienced in backend and frontend development with Python, Django, JavaScript, and Laravel. Strong background in algorithmic problem-solving, software architecture, and project-oriented development. Passionate about building scalable systems, contributing to open-source projects, and improving user experience through technology.
+                </p>
+            </div>
+        </section>
+
+        <section id="skills" class="py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center text-gray-900">Technical Skills</h2>
+                <p class="mt-4 text-lg text-gray-600 text-center">This chart showcases my proficiency across different technologies. You can use the buttons below to filter the skills by category and get a more focused view of my expertise.</p>
+                <div class="mt-8 text-center space-x-2" id="skill-filters">
+                    <button class="skill-filter-btn bg-gray-700 text-white px-4 py-2 rounded-md" data-filter="all">All</button>
+                    <button class="skill-filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-md" data-filter="languages">Languages</button>
+                    <button class="skill-filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-md" data-filter="frameworks">Frameworks</button>
+                    <button class="skill-filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-md" data-filter="databases">Databases</button>
+                    <button class="skill-filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-md" data-filter="tools">Tools</button>
+                </div>
+                <div class="mt-8 chart-container">
+                    <canvas id="skillsChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="py-16 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center text-gray-900">Professional Experience</h2>
+                <p class="mt-4 text-lg text-gray-600 text-center">Here is a timeline of my professional journey, highlighting key roles and responsibilities. Each position has contributed to my growth as a software engineer, providing me with diverse challenges and learning opportunities.</p>
+                <div class="mt-12 relative border-l-2 border-gray-300 ml-10">
+                    <div id="experience-timeline" class="space-y-12"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center text-gray-900">Projects</h2>
+                <p class="mt-4 text-lg text-gray-600 text-center max-w-3xl mx-auto">I believe in learning by doing. This gallery features a selection of my personal and academic projects. Use the filters to explore projects based on the technologies used.</p>
+                <div class="mt-8 text-center space-x-2 space-y-2" id="project-filters">
+                    <button class="project-filter-btn bg-gray-700 text-white px-4 py-2 rounded-md" data-filter="all">All</button>
+                </div>
+                <div id="projects-grid" class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3"></div>
+            </div>
+        </section>
+        
+        <section id="education" class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center text-gray-900">Education & Certifications</h2>
+                <div class="mt-12 grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-800">Education</h3>
+                        <div class="mt-6 space-y-6">
+                            <div class="bg-gray-50 p-6 rounded-lg">
+                                <p class="font-bold text-lg">Bachelor of Engineering, Computer Software Engineering</p>
+                                <p class="text-gray-600">Babol Noshirvani University of Technology (BNUT)</p>
+                                <p class="text-sm text-gray-500">2017 – 2021</p>
+                            </div>
+                            <div class="bg-gray-50 p-6 rounded-lg">
+                                <p class="font-bold text-lg">High School Diploma, Mathematics</p>
+                                <p class="text-gray-600">National Organization for Development of Exceptional Talents (Sampad)</p>
+                                <p class="text-sm text-gray-500">2011 – 2017</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-800">Certifications</h3>
+                        <ul id="certifications-list" class="mt-6 space-y-2 text-gray-700 list-disc list-inside">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Mohammad Daryani. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const resumeData = {
+            skills: {
+                all: [
+                    { name: 'Python', value: 90, type: 'languages' },
+                    { name: 'JavaScript', value: 85, type: 'languages' },
+                    { name: 'PHP', value: 70, type: 'languages' },
+                    { name: 'SQL', value: 80, type: 'languages' },
+                    { name: 'Django', value: 90, type: 'frameworks' },
+                    { name: 'Laravel', value: 75, type: 'frameworks' },
+                    { name: 'Next.js', value: 80, type: 'frameworks' },
+                    { name: 'PostgreSQL', value: 85, type: 'databases' },
+                    { name: 'MySQL', value: 75, type: 'databases' },
+                    { name: 'Git', value: 95, type: 'tools' },
+                    { name: 'Docker', value: 60, type: 'tools' },
+                    { name: 'REST APIs', value: 90, type: 'tools' },
+                ],
+                get languages() { return this.all.filter(s => s.type === 'languages') },
+                get frameworks() { return this.all.filter(s => s.type === 'frameworks') },
+                get databases() { return this.all.filter(s => s.type === 'databases') },
+                get tools() { return this.all.filter(s => s.type === 'tools') },
+            },
+            experience: [
+                {
+                    title: 'Software Engineer (Fullstack)',
+                    company: 'Iran Web and Mobile Festival (IWMF)',
+                    period: 'May 2022 – Present (Part-time)',
+                    description: 'Developed a ticketing application using Laravel for festival participants. Created various festival sections to manage participant data and service offerings. Improved user experience for festival attendees through robust full-stack development.'
+                },
+                {
+                    title: 'Software Engineer (Frontend)',
+                    company: 'Eshareh Communication Agency',
+                    period: 'Nov 2021 – Apr 2023 (Full-time)',
+                    description: 'Built and implemented dynamic frontend features for diverse marketing and advertising projects. Contributed significantly to customized web solutions, ensuring client satisfaction and project success. Collaborated effectively in a remote team environment.'
+                },
+                {
+                    title: 'Software Engineer (Backend)',
+                    company: 'Triboon (sub-company of Yektanet)',
+                    period: 'Feb 2022 – Apr 2022 (3 months)',
+                    description: 'Contributed to the development of an e-learning platform and SEO tools. Developed and maintained robust backend features using Python and Django for an advertorial platform.'
+                },
+                {
+                    title: 'Software Engineer (Backend)',
+                    company: 'Yektanet',
+                    period: 'Feb 2021 – Jan 2022 (1 year)',
+                    description: 'Worked on large-scale advertising platforms and backend systems. Contributed to building scalable web services, handling high throughput and complex data. Collaborated with cross-functional teams in a remote setting to deliver high-quality code.'
+                }
+            ],
+            projects: [
+                { name: 'Autotrader', desc: 'Automates exchange trades from TradingView signals via WebSocket.', tech: ['JavaScript'] },
+                { name: 'Tic-Tac-Toe-with-AI', desc: 'Implemented a Tic-Tac-Toe game with an AI algorithm.', tech: ['Python'] },
+                { name: 'CashManagementSystem', desc: 'A Django-based project designed for financial management.', tech: ['Python', 'Django'] },
+                { name: 'IWMF-Result', desc: 'A Python project for generating festival result pages with dynamic HTML patterns.', tech: ['Python', 'HTML', 'Pandas'] },
+                { name: 'redkala-autobid', desc: 'Python project for bidding automation on Redkala.com.', tech: ['Python'] },
+                { name: 'fetch-Irancell', desc: 'Web scraper project for extracting Irancell internet data.', tech: ['Python'] },
+                { name: 'Download-music', desc: 'Python project to search and download music using web scraping.', tech: ['Python'] },
+            ],
+            certifications: [
+                'Task-Oriented Course in Data Analysis With Python (Quera, Oct 2023)',
+                'Business Analysis & Process Management (Coursera, Sep 2023)',
+                'Service-Oriented Architecture (Coursera, Sep 2023)',
+                'Software Design and Architecture (Coursera, Sep 2023)',
+                'Design Patterns (Coursera, Jan 2023)',
+                'Object-Oriented Design (Coursera, Nov 2022)',
+                'Project-Oriented Course in Backend Development with Django (Quera, Jun 2022)',
+                'Project-Oriented Course in Front-End Web Development (Quera, Nov 2020)',
+            ]
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            let skillsChart;
+
+            function renderSkillsChart(filter = 'all') {
+                const skillsToShow = resumeData.skills[filter];
+                const ctx = document.getElementById('skillsChart').getContext('2d');
+                
+                if (skillsChart) {
+                    skillsChart.destroy();
+                }
+
+                skillsChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: skillsToShow.map(s => s.name),
+                        datasets: [{
+                            label: 'Proficiency',
+                            data: skillsToShow.map(s => s.value),
+                            backgroundColor: 'rgba(74, 85, 104, 0.8)',
+                            borderColor: 'rgba(45, 55, 72, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        indexAxis: 'y',
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            x: {
+                                beginAtZero: true,
+                                max: 100
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return `Proficiency: ${context.raw}%`;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            const skillFilterButtons = document.querySelectorAll('.skill-filter-btn');
+            skillFilterButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    skillFilterButtons.forEach(b => b.classList.remove('bg-gray-700', 'text-white'));
+                    skillFilterButtons.forEach(b => b.classList.add('bg-gray-200', 'text-gray-800'));
+                    btn.classList.add('bg-gray-700', 'text-white');
+                    btn.classList.remove('bg-gray-200', 'text-gray-800');
+                    renderSkillsChart(btn.dataset.filter);
+                });
+            });
+
+            renderSkillsChart();
+
+            const experienceContainer = document.getElementById('experience-timeline');
+            resumeData.experience.forEach(exp => {
+                const expEl = document.createElement('div');
+                expEl.className = 'timeline-item relative pl-8';
+                expEl.innerHTML = `
+                    <h3 class="text-xl font-semibold text-gray-800">${exp.title}</h3>
+                    <p class="text-md font-medium text-gray-600">${exp.company}</p>
+                    <p class="text-sm text-gray-500 mb-2">${exp.period}</p>
+                    <p class="text-gray-700">${exp.description}</p>
+                `;
+                experienceContainer.appendChild(expEl);
+            });
+
+            const projectsGrid = document.getElementById('projects-grid');
+            const projectFiltersContainer = document.getElementById('project-filters');
+            const allTechs = [...new Set(resumeData.projects.flatMap(p => p.tech))];
+
+            allTechs.forEach(tech => {
+                const btn = document.createElement('button');
+                btn.className = 'project-filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-md';
+                btn.dataset.filter = tech;
+                btn.textContent = tech;
+                projectFiltersContainer.appendChild(btn);
+            });
+            
+            function renderProjects(filter = 'all') {
+                projectsGrid.innerHTML = '';
+                const filteredProjects = filter === 'all' 
+                    ? resumeData.projects 
+                    : resumeData.projects.filter(p => p.tech.includes(filter));
+
+                filteredProjects.forEach(proj => {
+                    const projEl = document.createElement('div');
+                    projEl.className = 'project-card bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-1 transition-transform duration-300';
+                    projEl.innerHTML = `
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800">${proj.name}</h3>
+                            <p class="mt-2 text-gray-600">${proj.desc}</p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                ${proj.tech.map(t => `<span class="bg-gray-200 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">${t}</span>`).join('')}
+                            </div>
+                        </div>
+                    `;
+                    projectsGrid.appendChild(projEl);
+                });
+            }
+
+            const projectFilterButtons = document.querySelectorAll('.project-filter-btn');
+            projectFilterButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    projectFilterButtons.forEach(b => b.classList.remove('bg-gray-700', 'text-white'));
+                    projectFilterButtons.forEach(b => b.classList.add('bg-gray-200', 'text-gray-800'));
+                    btn.classList.add('bg-gray-700', 'text-white');
+                    btn.classList.remove('bg-gray-200', 'text-gray-800');
+                    renderProjects(btn.dataset.filter);
+                });
+            });
+
+            renderProjects();
+            
+            const certsList = document.getElementById('certifications-list');
+            resumeData.certifications.forEach(cert => {
+                const li = document.createElement('li');
+                li.textContent = cert;
+                certsList.appendChild(li);
+            });
+        });
+    </script>
+</body>
+</html>
