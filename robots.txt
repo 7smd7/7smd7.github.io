@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://mohammaddaryani.dev/sitemap.xml
+Host: mohammaddaryani.dev

@@ -4,6 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohammad Daryani | Software Engineer</title>
+    <!-- Primary SEO -->
+    <meta name="description" content="Mohammad Daryani — Software Engineer. Portfolio showcasing skills, experience, projects, and certifications. Full-stack development, Python, JavaScript, and system design." />
+    <link rel="canonical" href="https://mohammaddaryani.dev/" />
+    <meta name="author" content="Mohammad Daryani" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Mohammad Daryani — Software Engineer" />
+    <meta property="og:description" content="Portfolio showcasing skills, experience, projects, and certifications." />
+    <meta property="og:url" content="https://mohammaddaryani.dev/" />
+    <meta property="og:site_name" content="Mohammad Daryani" />
+    <meta property="og:image" content="https://mohammaddaryani.dev/assets/og-image.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mohammad Daryani — Software Engineer" />
+    <meta name="twitter:description" content="Portfolio showcasing skills, experience, projects, and certifications." />
+    <meta name="twitter:image" content="https://mohammaddaryani.dev/assets/og-image.png" />
+
+    <!-- JSON-LD / Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mohammad Daryani",
+        "url": "https://mohammaddaryani.dev/",
+        "sameAs": [
+            "https://linkedin.com/in/m-daryani/",
+            "https://github.com/7smd7"
+        ],
+        "jobTitle": "Software Engineer"
+    }
+    </script>
+    <script>
+        tailwind = { darkMode: 'class' };
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +55,138 @@
             font-family: 'Inter', sans-serif;
             background-color: #FDFDFB;
             color: #1a202c;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
+        .hero-title {
+            color: #1a202c !important;
+        }
+        .dark .hero-title {
+            color: #f1f5f9 !important;
+        }
+        .nav-title {
+            color: #1a202c !important;
+        }
+        .dark .nav-title {
+            color: #f1f5f9 !important;
+        }
+        
+        /* Dark mode styles */
+        .dark body {
+            background-color: #0f172a;
+            color: #f1f5f9;
+        }
+        
+        .dark nav {
+            background: rgba(15, 23, 42, 0.9) !important;
+            border-bottom: 1px solid #374151;
+        }
+        
+        .dark nav a {
+            color: #cbd5e1 !important;
+        }
+        
+        .dark nav a:hover {
+            color: #ffffff !important;
+            background-color: #374151 !important;
+        }
+        
+        .dark section {
+            background-color: #0f172a !important;
+        }
+        
+        .dark h1, .dark h2, .dark h3 {
+            color: #f1f5f9 !important;
+        }
+        
+        .dark p, .dark li {
+            color: #cbd5e1 !important;
+        }
+        
+        .dark .bg-white {
+            background-color: #1e293b !important;
+        }
+        
+        .dark .bg-gray-50 {
+            background-color: #374151 !important;
+        }
+        
+        .dark .text-gray-600, .dark .text-gray-700, .dark .text-gray-800, .dark .text-gray-500 {
+            color: #cbd5e1 !important;
+        }
+        
+        .dark .text-gray-900:not(h1) {
+            color: #f1f5f9 !important;
+        }
+        
+        .dark .border-gray-300 {
+            border-color: #4b5563 !important;
+        }
+        
+        .dark .timeline-item::before {
+            border-color: #0f172a;
+            background-color: #64748b;
+        }
+        
+        /* Fix specific dark mode text issues */
+        .dark #experience-timeline h3,
+        .dark #experience-timeline p {
+            color: #f1f5f9 !important;
+        }
+        
+        .dark #experience-timeline p:not(:first-of-type) {
+            color: #cbd5e1 !important;
+        }
+        
+        .dark .project-card {
+            background-color: #1e293b !important;
+            border: 1px solid #374151 !important;
+        }
+        
+        .dark .project-card h3 {
+            color: #f1f5f9 !important;
+        }
+        
+        .dark .project-card p {
+            color: #cbd5e1 !important;
+        }
+        
+        .dark .skill-filter-btn:not(.bg-gray-700) {
+            background-color: #374151 !important;
+            color: #f1f5f9 !important;
+        }
+        
+        .dark .project-filter-btn:not(.bg-gray-700) {
+            background-color: #374151 !important;
+            color: #f1f5f9 !important;
+        }
+        
+        /* Ensure footer stays dark in both modes */
+        footer {
+            background-color: #1f2937 !important;
+        }
+        
+        .dark footer {
+            background-color: #0f172a !important;
+        }
+        
+        /* Fix any remaining text visibility issues */
+        .dark * {
+            border-color: #4b5563;
+        }
+        
+        .dark .text-gray-900:not(h1),
+        .dark .text-gray-800,
+        .dark .text-gray-700,
+        .dark .text-gray-600,
+        .dark .text-gray-500 {
+            color: #f1f5f9 !important;
+        }
+        
+        .dark span[class*="bg-gray-200"] {
+            background-color: #4b5563 !important;
+            color: #f1f5f9 !important;
+        }
+        
         .chart-container {
             position: relative;
             width: 100%;
@@ -44,6 +212,42 @@
             background-color: #4A5568;
             border: 4px solid #FDFDFB;
         }
+        
+        /* Binary pattern background for hero section */
+        header:first-of-type {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header:first-of-type::before {
+            content: '010101010101010101010101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300%;
+            height: 200%;
+            font-family: 'Courier New', monospace;
+            font-size: 20px;
+            line-height: 1.2;
+            color: rgba(0, 0, 0, 0.1);
+            white-space: pre-wrap;
+            word-break: break-all;
+            z-index: -1;
+            animation: binary-scroll 100s linear infinite;
+        }
+        
+        .dark header:first-of-type::before {
+            color: rgba(255, 255, 255, 0.1);
+        }
+        
+        @keyframes binary-scroll {
+            0% {
+                transform: translateX(0) translateY(0);
+            }
+            100% {
+                transform: translateX(-50%) translateY(-20px);
+            }
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -52,16 +256,21 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
-                    <span class="font-bold text-xl text-gray-800">Mohammad Daryani</span>
+                    <span class="nav-title font-bold text-xl text-gray-600 dark:text-white">Mohammad Daryani</span>
                 </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#summary" class="text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">About</a>
-                        <a href="#skills" class="text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Skills</a>
-                        <a href="#experience" class="text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Experience</a>
-                        <a href="#projects" class="text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Projects</a>
-                        <a href="#education" class="text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Education</a>
+                <div class="flex items-center space-x-4">
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="#summary" class="text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                            <a href="#skills" class="text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+                            <a href="#experience" class="text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Experience</a>
+                            <a href="#projects" class="text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                            <a href="#education" class="text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Education</a>
+                        </div>
                     </div>
+                    <button id="theme-toggle" class="p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white focus:outline-none" aria-label="Toggle theme">
+                        <span id="theme-icon">🌙</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -70,14 +279,14 @@
     <main>
         <header class="py-20 md:py-32">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-gray-900">Mohammad Daryani</h1>
+                <h1 class="hero-title text-4xl md:text-6xl font-bold tracking-tight text-gray-900 dark:text-white">Mohammad Daryani</h1>
                 <p class="mt-4 text-lg md:text-xl text-gray-600">Software Engineer | BE in Software Engineering</p>
                 <div class="mt-8 flex justify-center space-x-6">
-                    <a href="https://linkedin.com/in/m-daryani/" target="_blank" class="text-gray-500 hover:text-gray-900">
+                    <a href="https://linkedin.com/in/m-daryani/" target="_blank" rel="noopener" class="text-gray-500 hover:text-gray-900">
                         <span class="sr-only">LinkedIn</span>
                         <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                     </a>
-                    <a href="https://github.com/7smd7" target="_blank" class="text-gray-500 hover:text-gray-900">
+                    <a href="https://github.com/7smd7" target="_blank" rel="noopener" class="text-gray-500 hover:text-gray-900">
                         <span class="sr-only">GitHub</span>
                         <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                     </a>
@@ -147,7 +356,7 @@
                             <div class="bg-gray-50 p-6 rounded-lg">
                                 <p class="font-bold text-lg">High School Diploma, Mathematics</p>
                                 <p class="text-gray-600">National Organization for Development of Exceptional Talents (Sampad)</p>
-                                <p class="text-sm text-gray-500">2011 – 2017</p>
+                                <p class="text-sm text-gray-500">2010 – 2017</p>
                             </div>
                         </div>
                     </div>
@@ -172,17 +381,16 @@
             skills: {
                 all: [
                     { name: 'Python', value: 90, type: 'languages' },
-                    { name: 'JavaScript', value: 85, type: 'languages' },
-                    { name: 'PHP', value: 70, type: 'languages' },
-                    { name: 'SQL', value: 80, type: 'languages' },
                     { name: 'Django', value: 90, type: 'frameworks' },
-                    { name: 'Laravel', value: 75, type: 'frameworks' },
+                    { name: 'JavaScript', value: 85, type: 'languages' },
                     { name: 'Next.js', value: 80, type: 'frameworks' },
-                    { name: 'PostgreSQL', value: 85, type: 'databases' },
-                    { name: 'MySQL', value: 75, type: 'databases' },
-                    { name: 'Git', value: 95, type: 'tools' },
+                    { name: 'PHP', value: 70, type: 'languages' },
+                    { name: 'Laravel', value: 75, type: 'frameworks' },
+                    { name: 'Prompt Engineering', value: 90, type: 'tools' },
+                    { name: 'PostgreSQL', value: 75, type: 'databases' },
+                    { name: 'Git', value: 70, type: 'tools' },
                     { name: 'Docker', value: 60, type: 'tools' },
-                    { name: 'REST APIs', value: 90, type: 'tools' },
+                    { name: 'REST APIs', value: 80, type: 'tools' },
                 ],
                 get languages() { return this.all.filter(s => s.type === 'languages') },
                 get frameworks() { return this.all.filter(s => s.type === 'frameworks') },
@@ -191,29 +399,26 @@
             },
             experience: [
                 {
-                    title: 'Software Engineer (Fullstack)',
+                    title: 'Software Engineer (Fullstack - Laravel)',
                     company: 'Iran Web and Mobile Festival (IWMF)',
-                    period: 'May 2022 – Present (Part-time)',
-                    description: 'Developed a ticketing application using Laravel for festival participants. Created various festival sections to manage participant data and service offerings. Improved user experience for festival attendees through robust full-stack development.'
+                    url: 'https://iwmf.ir',
+                    period: 'May 2025 – Present (Part-time)',
+                    description: 'Full-stack Laravel developer at the Iran Web and Mobile Festival (IWMF)—the country’s largest and longest-running digital competition platform. Led development of the internal management panel, delivering new features to support operational workflows and enhance user experience.'
                 },
                 {
-                    title: 'Software Engineer (Frontend)',
+                    title: 'Software Engineer (Frontend - Next.js)',
                     company: 'Eshareh Communication Agency',
-                    period: 'Nov 2021 – Apr 2023 (Full-time)',
-                    description: 'Built and implemented dynamic frontend features for diverse marketing and advertising projects. Contributed significantly to customized web solutions, ensuring client satisfaction and project success. Collaborated effectively in a remote team environment.'
+                    url: 'https://eshareh.com',
+                    period: 'Nov 2024 – Apr 2025 (Full-time)',
+                    description: 'Developed responsive front-end interfaces for a new startup under Eshareh Communication Agency, using Next.js with REST API integrations and CI/CD pipelines to deliver scalable, production-ready web applications.'
                 },
                 {
-                    title: 'Software Engineer (Backend)',
+                    title: 'Software Engineer (Backend - Django)',
                     company: 'Triboon (sub-company of Yektanet)',
-                    period: 'Feb 2022 – Apr 2022 (3 months)',
-                    description: 'Contributed to the development of an e-learning platform and SEO tools. Developed and maintained robust backend features using Python and Django for an advertorial platform.'
+                    url: 'https://triboon.net',
+                    period: 'Nov 2021 – Apr 2022 (Full-time)',
+                    description: 'Contributed to backend development for Triboon, a digital PR and SEO platform under Yektanet, building scalable services with Python (Django), Celery, REST APIs, CI/CD pipelines, and Sentry for monitoring.'
                 },
-                {
-                    title: 'Software Engineer (Backend)',
-                    company: 'Yektanet',
-                    period: 'Feb 2021 – Jan 2022 (1 year)',
-                    description: 'Worked on large-scale advertising platforms and backend systems. Contributed to building scalable web services, handling high throughput and complex data. Collaborated with cross-functional teams in a remote setting to deliver high-quality code.'
-                }
             ],
             projects: [
                 { name: 'Autotrader', desc: 'Automates exchange trades from TradingView signals via WebSocket.', tech: ['JavaScript'] },
@@ -242,6 +447,20 @@
             function renderSkillsChart(filter = 'all') {
                 const skillsToShow = resumeData.skills[filter];
                 const ctx = document.getElementById('skillsChart').getContext('2d');
+                const isDark = document.documentElement.classList.contains('dark');
+                
+                // Theme-aware colors
+                const colors = isDark ? {
+                    bg: 'rgba(148, 163, 184, 0.8)',
+                    border: 'rgba(226, 232, 240, 1)',
+                    grid: 'rgba(75, 85, 99, 0.3)',
+                    text: '#e2e8f0'
+                } : {
+                    bg: 'rgba(74, 85, 104, 0.8)',
+                    border: 'rgba(45, 55, 72, 1)',
+                    grid: 'rgba(229, 231, 235, 0.5)',
+                    text: '#374151'
+                };
                 
                 if (skillsChart) {
                     skillsChart.destroy();
@@ -254,8 +473,8 @@
                         datasets: [{
                             label: 'Proficiency',
                             data: skillsToShow.map(s => s.value),
-                            backgroundColor: 'rgba(74, 85, 104, 0.8)',
-                            borderColor: 'rgba(45, 55, 72, 1)',
+                            backgroundColor: colors.bg,
+                            borderColor: colors.border,
                             borderWidth: 1
                         }]
                     },
@@ -266,7 +485,13 @@
                         scales: {
                             x: {
                                 beginAtZero: true,
-                                max: 100
+                                max: 100,
+                                grid: { color: colors.grid },
+                                ticks: { color: colors.text }
+                            },
+                            y: {
+                                grid: { color: colors.grid },
+                                ticks: { color: colors.text }
                             }
                         },
                         plugins: {
@@ -304,7 +529,12 @@
                 expEl.className = 'timeline-item relative pl-8';
                 expEl.innerHTML = `
                     <h3 class="text-xl font-semibold text-gray-800">${exp.title}</h3>
-                    <p class="text-md font-medium text-gray-600">${exp.company}</p>
+                    <a href="${exp.url}" target="_blank" rel="noopener" class="inline-flex items-center text-md font-medium text-gray-600 hover:text-gray-900 group">
+                        <span>${exp.company}</span>
+                        <svg class="w-4 h-4 ml-1 text-gray-400 transition-colors duration-200 group-hover:text-gray-700 dark:group-hover:text-gray-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5M21 3l-9.75 9.75M15.75 3H21v5.25"/>
+                        </svg>
+                    </a>
                     <p class="text-sm text-gray-500 mb-2">${exp.period}</p>
                     <p class="text-gray-700">${exp.description}</p>
                 `;
@@ -363,6 +593,40 @@
                 const li = document.createElement('li');
                 li.textContent = cert;
                 certsList.appendChild(li);
+            });
+            
+            // Simple theme toggle
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = document.getElementById('theme-icon');
+            const html = document.documentElement;
+            
+            // Set dark as default
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                html.classList.remove('dark');
+                themeIcon.textContent = '☀️';
+            } else {
+                html.classList.add('dark');
+                themeIcon.textContent = '🌙';
+            }
+            
+            themeToggle.addEventListener('click', () => {
+                if (html.classList.contains('dark')) {
+                    html.classList.remove('dark');
+                    themeIcon.textContent = '☀️';
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    html.classList.add('dark');
+                    themeIcon.textContent = '🌙';
+                    localStorage.setItem('theme', 'dark');
+                }
+                
+                // Re-render chart with new colors
+                if (skillsChart) {
+                    const activeBtn = document.querySelector('#skill-filters .bg-gray-700');
+                    const filter = activeBtn ? activeBtn.dataset.filter : 'all';
+                    renderSkillsChart(filter);
+                }
             });
         });
     </script>
