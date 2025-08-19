@@ -126,6 +126,48 @@ Small scale + rapid iteration; Purge/optimization can be introduced later if nee
 **How is dark mode persisted?**  
 Simple `localStorage` key (`theme`) toggled by a button; default is dark unless explicitly set to light.
 
+## 🔧 Troubleshooting GitHub Pages Deployment
+
+If your GitHub Pages site isn't updating after pushing changes, try these solutions:
+
+### Quick Fixes
+1. **Hard Refresh**: `Ctrl+F5` (Windows) or `Cmd+Shift+R` (Mac)
+2. **Incognito Mode**: Test in private/incognito browsing
+3. **Check Debug Page**: Visit `/debug.html` for diagnostic information
+4. **Run Diagnostic Script**: `./diagnose-deployment.sh` (if on Unix/Linux/Mac)
+
+### Common Issues
+
+**Custom Domain Not Working**
+- Verify CNAME file contains only: `mohammaddaryani.dev`
+- Check DNS settings point to `7smd7.github.io`
+- DNS changes can take 24-48 hours to propagate
+
+**Changes Not Appearing**
+- Ensure you're pushing to the `main` branch
+- Check Actions tab for deployment status
+- Browser cache may be showing old version
+
+**GitHub Pages Settings**
+- Go to Settings → Pages
+- Source: "Deploy from a branch"
+- Branch: `main` / `/ (root)`
+- Custom domain: `mohammaddaryani.dev`
+
+### Deployment Verification
+- Check the timestamp in the footer of the live site
+- Compare with your latest commit time
+- Monitor GitHub Actions for successful deployments
+
+### Force New Deployment
+```bash
+# Make a small change to trigger deployment
+echo "<!-- Updated $(date) -->" >> index.html
+git add index.html
+git commit -m "Force deployment update"
+git push origin main
+```
+
 ---
 
 If you find a rendering or accessibility issue, please open an Issue with browser + OS details.

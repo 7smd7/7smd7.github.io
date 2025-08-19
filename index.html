@@ -12,6 +12,12 @@
         <link rel="canonical" href="https://mohammaddaryani.dev/" />
         <meta name="author" content="Mohammad Daryani" />
         <meta name="robots" content="index, follow" />
+        
+        <!-- Cache Control for Development -->
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+        <meta name="last-modified" content="2025-08-19T22:22:00Z" />
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
@@ -617,6 +623,10 @@
         <footer class="bg-gray-800 text-white py-8">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <p>&copy; 2025 Mohammad Daryani. All rights reserved.</p>
+                <p class="text-sm text-gray-400 mt-2">
+                    Last updated: <span id="lastUpdated">2025-08-19 22:25:00 UTC</span> | 
+                    <a href="/debug.html" class="text-gray-300 hover:text-white">Debug Info</a>
+                </p>
             </div>
         </footer>
 
@@ -1238,6 +1248,14 @@
                         renderSkillsChart(filter);
                     }
                 });
+                
+                // Add dynamic timestamp to footer
+                const lastUpdatedElement = document.getElementById('lastUpdated');
+                if (lastUpdatedElement) {
+                    // Add "Page loaded at" info for debugging
+                    const now = new Date();
+                    lastUpdatedElement.title = `Page loaded at: ${now.toISOString()}`;
+                }
             });
         </script>
     </body>

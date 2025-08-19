@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Pages Deployment Debug</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .status { padding: 10px; margin: 10px 0; border-radius: 4px; }
+        .success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .info { background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+        .warning { background: #fff3cd; color: #856404; border: 1px solid #ffeaa7; }
+        code { background: #f8f9fa; padding: 2px 4px; border-radius: 3px; font-family: monospace; }
+        .timestamp { font-weight: bold; color: #007bff; }
+        .section { margin: 20px 0; }
+        .test-result { margin: 10px 0; padding: 10px; background: #f8f9fa; border-left: 4px solid #007bff; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 GitHub Pages Deployment Debug Page</h1>
+        <p>This page helps diagnose why your GitHub Pages site might not be updating properly.</p>
+        
+        <div class="section">
+            <h2>🕐 Current Deployment Status</h2>
+            <div class="status success">
+                <strong>✅ Page Successfully Loaded</strong><br>
+                This debug page is being served from GitHub Pages, which means the deployment system is working.
+            </div>
+            <div class="test-result">
+                <strong>Deployment Timestamp:</strong> <span class="timestamp" id="timestamp"></span><br>
+                <strong>User Agent:</strong> <span id="userAgent"></span><br>
+                <strong>Page URL:</strong> <span id="currentUrl"></span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🌐 Domain Configuration</h2>
+            <div class="test-result">
+                <strong>Expected Domain:</strong> <code>mohammaddaryani.dev</code><br>
+                <strong>Current Domain:</strong> <code id="currentDomain"></code><br>
+                <strong>Protocol:</strong> <code id="protocol"></code>
+            </div>
+            <div class="status info" id="domainStatus">
+                <strong>Domain Status:</strong> <span id="domainMessage">Checking...</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🔄 Cache Information</h2>
+            <div class="test-result">
+                <strong>Cache Headers Check:</strong><br>
+                To check if caching is causing issues, try these steps:
+                <ol>
+                    <li>Hard refresh: <code>Ctrl+F5</code> (Windows) or <code>Cmd+Shift+R</code> (Mac)</li>
+                    <li>Open browser DevTools → Network tab → check "Disable cache"</li>
+                    <li>Try accessing in incognito/private browsing mode</li>
+                    <li>Clear your browser cache completely</li>
+                </ol>
+            </div>
+            <div class="test-result">
+                <strong>DNS Cache:</strong> If you recently changed DNS settings, it may take 24-48 hours to propagate globally.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🔧 Troubleshooting Steps</h2>
+            <div class="test-result">
+                <h3>1. Verify DNS Configuration</h3>
+                <p>Check that your domain <code>mohammaddaryani.dev</code> points to GitHub Pages:</p>
+                <ul>
+                    <li>CNAME record should point to: <code>7smd7.github.io</code></li>
+                    <li>Or A records should point to GitHub Pages IP addresses</li>
+                </ul>
+                
+                <h3>2. Check Repository Settings</h3>
+                <p>Verify GitHub Pages is enabled and configured correctly:</p>
+                <ul>
+                    <li>Go to repository Settings → Pages</li>
+                    <li>Source should be "Deploy from a branch"</li>
+                    <li>Branch should be "main" and folder should be "/ (root)"</li>
+                    <li>Custom domain should show <code>mohammaddaryani.dev</code></li>
+                </ul>
+
+                <h3>3. Force a New Deployment</h3>
+                <p>Make a small change to trigger a new deployment:</p>
+                <ul>
+                    <li>Edit any file in the repository</li>
+                    <li>Commit and push to the main branch</li>
+                    <li>Check Actions tab for deployment status</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📊 Last Known Deployment</h2>
+            <div class="test-result">
+                <strong>Last Successful Deployment:</strong> 2025-08-19T22:17:31Z<br>
+                <strong>Commit SHA:</strong> <code>1798c751f4419157940b4f410782a43f768d88fe</code><br>
+                <strong>Deployment Status:</strong> ✅ Success
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🆘 If Issues Persist</h2>
+            <div class="status warning">
+                <strong>Additional Debugging Steps:</strong>
+                <ol>
+                    <li>Test the GitHub Pages default URL: <a href="https://7smd7.github.io" target="_blank">https://7smd7.github.io</a></li>
+                    <li>Use DNS checking tools like <code>nslookup</code> or online DNS checkers</li>
+                    <li>Check GitHub Status page for any service issues</li>
+                    <li>Verify SSL certificate is valid for your custom domain</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🔗 Useful Links</h2>
+            <ul>
+                <li><a href="https://github.com/7smd7/7smd7.github.io/actions" target="_blank">GitHub Actions (Deployment History)</a></li>
+                <li><a href="https://github.com/7smd7/7smd7.github.io/settings/pages" target="_blank">Repository Pages Settings</a></li>
+                <li><a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site" target="_blank">GitHub Pages Custom Domain Documentation</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Set current timestamp
+        document.getElementById('timestamp').textContent = new Date().toISOString();
+        
+        // Set user agent
+        document.getElementById('userAgent').textContent = navigator.userAgent;
+        
+        // Set current URL
+        document.getElementById('currentUrl').textContent = window.location.href;
+        
+        // Check domain configuration
+        const currentDomain = window.location.hostname;
+        const expectedDomain = 'mohammaddaryani.dev';
+        
+        document.getElementById('currentDomain').textContent = currentDomain;
+        document.getElementById('protocol').textContent = window.location.protocol;
+        
+        const domainStatus = document.getElementById('domainStatus');
+        const domainMessage = document.getElementById('domainMessage');
+        
+        if (currentDomain === expectedDomain) {
+            domainMessage.textContent = '✅ Custom domain is working correctly!';
+            domainStatus.className = 'status success';
+        } else if (currentDomain === '7smd7.github.io') {
+            domainMessage.textContent = '⚠️ Using GitHub Pages default domain. Custom domain may not be configured properly.';
+            domainStatus.className = 'status warning';
+        } else {
+            domainMessage.textContent = '❌ Unexpected domain. Check your DNS configuration.';
+            domainStatus.className = 'status warning';
+        }
+        
+        // Add cache-busting parameter to current page info
+        const urlParams = new URLSearchParams(window.location.search);
+        if (!urlParams.has('v')) {
+            console.log('To test cache-busting, add ?v=' + Date.now() + ' to the URL');
+        }
+    </script>
+</body>
+</html>
