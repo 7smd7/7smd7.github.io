@@ -4,7 +4,6 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Mohammad Daryani | Software Engineer</title>
-        <!-- Primary SEO -->
         <meta
             name="description"
             content="Mohammad Daryani — Software Engineer. Portfolio showcasing skills, experience, projects, and certifications. Full-stack development, Python, JavaScript, and system design."
@@ -13,7 +12,6 @@
         <meta name="author" content="Mohammad Daryani" />
         <meta name="robots" content="index, follow" />
 
-        <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
         <meta
             property="og:title"
@@ -30,7 +28,6 @@
             content="https://mohammaddaryani.dev/assets/og-image.png"
         />
 
-        <!-- Twitter -->
         <meta name="twitter:card" content="summary_large_image" />
         <meta
             name="twitter:title"
@@ -45,7 +42,6 @@
             content="https://mohammaddaryani.dev/assets/og-image.png"
         />
 
-        <!-- JSON-LD / Structured Data -->
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
@@ -73,10 +69,6 @@
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
             rel="stylesheet"
         />
-        <!-- Chosen Palette: Warm Neutrals -->
-        <!-- Application Structure Plan: A single-page, vertical-scrolling interactive portfolio. The structure includes a hero section, an interactive skills dashboard (filterable bar chart), a career timeline, a filterable project gallery, and sections for education/certifications. This non-linear, interactive structure was chosen to allow recruiters to quickly explore and filter information based on their specific needs (e.g., finding all Python projects), making the profile more engaging and easier to digest than a static document. -->
-        <!-- Visualization & Content Choices: Skills -> Goal: Compare -> Viz: Interactive Bar Chart -> Interaction: Filter by category -> Justification: Visualizes skill set dynamically -> Library: Chart.js. Experience -> Goal: Show Change -> Method: Vertical Timeline -> Interaction: Expand/collapse details -> Justification: Shows career progression clearly. Projects -> Goal: Organize -> Method: Filterable Card Grid -> Interaction: Filter by technology -> Justification: Allows targeted exploration of relevant work -> Library/Method: Vanilla JS + Tailwind. -->
-        <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
         <style>
             body {
                 font-family: "Inter", sans-serif;
@@ -97,7 +89,6 @@
                 color: #f1f5f9 !important;
             }
 
-            /* Dark mode styles */
             .dark body {
                 background-color: #0f172a;
                 color: #f1f5f9;
@@ -160,7 +151,6 @@
                 background-color: #64748b;
             }
 
-            /* Fix specific dark mode text issues */
             .dark #experience-timeline h3,
             .dark #experience-timeline p {
                 color: #f1f5f9 !important;
@@ -193,7 +183,6 @@
                 color: #f1f5f9 !important;
             }
 
-            /* Ensure footer stays dark in both modes */
             footer {
                 background-color: #1f2937 !important;
             }
@@ -202,7 +191,6 @@
                 background-color: #0f172a !important;
             }
 
-            /* Fix any remaining text visibility issues */
             .dark * {
                 border-color: #4b5563;
             }
@@ -246,7 +234,6 @@
                 border: 4px solid #fdfdfb;
             }
 
-            /* Binary pattern background for hero section */
             header:first-of-type {
                 position: relative;
                 overflow: hidden;
@@ -266,7 +253,7 @@
                 white-space: pre-wrap;
                 word-break: break-all;
                 z-index: -1;
-                animation: binary-scroll 100s linear infinite;
+                animation: binary-scroll 60s linear infinite;
             }
 
             .dark header:first-of-type::before {
@@ -564,62 +551,35 @@
 
             <section id="education" class="py-16 bg-white">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 class="text-3xl font-bold text-center text-gray-900">
-                        Education & Certifications
-                    </h2>
+                    <h2 class="text-3xl font-bold text-center text-gray-900">Education, Certifications & Volunteering</h2>
                     <div class="mt-12 grid md:grid-cols-2 gap-12">
                         <div>
-                            <h3 class="text-2xl font-semibold text-gray-800">
-                                Education
-                            </h3>
+                            <h3 class="text-2xl font-semibold text-gray-800">Education</h3>
                             <div class="mt-6 space-y-6">
                                 <div class="bg-gray-50 p-6 rounded-lg">
-                                    <p class="font-bold text-lg">
-                                        Bachelor of Engineering, Computer
-                                        Software Engineering
-                                    </p>
-                                    <p class="text-gray-600">
-                                        Babol Noshirvani University of
-                                        Technology (BNUT)
-                                    </p>
-                                    <p class="text-sm text-gray-500">
-                                        2017 – 2021
-                                    </p>
+                                    <p class="font-bold text-lg">Bachelor of Engineering, Computer Software Engineering</p>
+                                    <p class="text-gray-600">Babol Noshirvani University of Technology (BNUT)</p>
+                                    <p class="text-sm text-gray-500">2017 – 2021</p>
                                 </div>
                                 <div class="bg-gray-50 p-6 rounded-lg">
-                                    <p class="font-bold text-lg">
-                                        High School Diploma, Mathematics
-                                    </p>
-                                    <p class="text-gray-600">
-                                        National Organization for Development of
-                                        Exceptional Talents (Sampad)
-                                    </p>
-                                    <p class="text-sm text-gray-500">
-                                        2010 – 2017
-                                    </p>
+                                    <p class="font-bold text-lg">High School Diploma, Mathematics</p>
+                                    <p class="text-gray-600">National Organization for Development of Exceptional Talents (Sampad)</p>
+                                    <p class="text-sm text-gray-500">2010 – 2017</p>
                                 </div>
                             </div>
+                            <h3 class="mt-10 text-xl font-semibold text-gray-800">Volunteering</h3>
+                            <p class="mt-2 text-sm text-gray-600 leading-relaxed">
+                                These roles are outside my core software engineering track, but they helped me build strong communication, community presence, content/storytelling skills, and long‑term relationships within the broader tech ecosystem.
+                            </p>
+                            <div id="volunteering-list" class="mt-6 space-y-6"></div>
                         </div>
                         <div>
-                            <h3 class="text-2xl font-semibold text-gray-800">
-                                Certifications
-                            </h3>
-                            <ul
-                                id="certifications-list"
-                                class="mt-6 space-y-2 text-gray-700 list-disc list-inside"
-                            ></ul>
+                            <h3 class="text-2xl font-semibold text-gray-800">Certifications</h3>
+                            <ul id="certifications-list" class="mt-6 grid gap-5 sm:grid-cols-2 list-none p-0" role="list"></ul>
                         </div>
                     </div>
                 </div>
             </section>
-        </main>
-
-        <footer class="bg-gray-800 text-white py-8">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <p>&copy; 2025 Mohammad Daryani. All rights reserved.</p>
-            </div>
-        </footer>
-
         <script>
             const resumeData = {
                 skills: {
@@ -630,101 +590,41 @@
                         { name: "Next.js", value: 80, type: "frameworks" },
                         { name: "PHP", value: 70, type: "languages" },
                         { name: "Laravel", value: 75, type: "frameworks" },
-                        {
-                            name: "Prompt Engineering",
-                            value: 90,
-                            type: "tools",
-                        },
+                        { name: "Prompt Engineering", value: 90, type: "tools" },
                         { name: "PostgreSQL", value: 75, type: "databases" },
                         { name: "Git", value: 70, type: "tools" },
                         { name: "Docker", value: 60, type: "tools" },
                         { name: "REST APIs", value: 80, type: "tools" },
                     ],
-                    get languages() {
-                        return this.all.filter((s) => s.type === "languages");
-                    },
-                    get frameworks() {
-                        return this.all.filter((s) => s.type === "frameworks");
-                    },
-                    get databases() {
-                        return this.all.filter((s) => s.type === "databases");
-                    },
-                    get tools() {
-                        return this.all.filter((s) => s.type === "tools");
-                    },
+                    get languages() { return this.all.filter(s=>s.type==='languages'); },
+                    get frameworks() { return this.all.filter(s=>s.type==='frameworks'); },
+                    get databases() { return this.all.filter(s=>s.type==='databases'); },
+                    get tools() { return this.all.filter(s=>s.type==='tools'); },
                 },
                 experience: [
-                    {
-                        title: "Software Engineer (Fullstack - Laravel)",
-                        company: "Iran Web and Mobile Festival (IWMF)",
-                        url: "https://iwmf.ir",
-                        period: "May 2025 – Present (Part-time)",
-                        description:
-                            "Full-stack Laravel developer at the Iran Web and Mobile Festival (IWMF)—the country’s largest and longest-running digital competition platform. Led development of the internal management panel, delivering new features to support operational workflows and enhance user experience.",
-                    },
-                    {
-                        title: "Software Engineer (Frontend - Next.js)",
-                        company: "Eshareh Communication Agency",
-                        url: "https://eshareh.com",
-                        period: "Nov 2024 – Apr 2025 (Full-time)",
-                        description:
-                            "Developed responsive front-end interfaces for a new startup under Eshareh Communication Agency, using Next.js with REST API integrations and CI/CD pipelines to deliver scalable, production-ready web applications.",
-                    },
-                    {
-                        title: "Software Engineer (Backend - Django)",
-                        company: "Triboon (sub-company of Yektanet)",
-                        url: "https://triboon.net",
-                        period: "Nov 2021 – Apr 2022 (Full-time)",
-                        description:
-                            "Contributed to backend development for Triboon, a digital PR and SEO platform under Yektanet, building scalable services with Python (Django), Celery, REST APIs, CI/CD pipelines, and Sentry for monitoring.",
-                    },
+                    { title: "Software Engineer (Fullstack - Laravel)", company: "Iran Web and Mobile Festival (IWMF)", url: "https://iwmf.ir", period: "May 2025 – Present (Part-time)", description: "Full-stack Laravel developer at the Iran Web and Mobile Festival (IWMF)—the country’s largest and longest-running digital competition platform. Led development of the internal management panel, delivering new features to support operational workflows and enhance user experience." },
+                    { title: "Software Engineer (Frontend - Next.js)", company: "Eshareh Communication Agency", url: "https://eshareh.com", period: "Nov 2024 – Apr 2025 (Full-time)", description: "Developed responsive front-end interfaces for a new startup under Eshareh Communication Agency, using Next.js with REST API integrations and CI/CD pipelines to deliver scalable, production-ready web applications." },
+                    { title: "Software Engineer (Backend - Django)", company: "Triboon (sub-company of Yektanet)", url: "https://triboon.net", period: "Nov 2021 – Apr 2022 (Full-time)", description: "Contributed to backend development for Triboon, a digital PR and SEO platform under Yektanet, building scalable services with Python (Django), Celery, REST APIs, CI/CD pipelines, and Sentry for monitoring." },
                 ],
-                projects: [
-                    {
-                        name: "Autotrader",
-                        desc: "Automates exchange trades from TradingView signals via WebSocket.",
-                        tech: ["JavaScript"],
-                    },
-                    {
-                        name: "Tic-Tac-Toe-with-AI",
-                        desc: "Implemented a Tic-Tac-Toe game with an AI algorithm.",
-                        tech: ["Python"],
-                    },
-                    {
-                        name: "CashManagementSystem",
-                        desc: "A Django-based project designed for financial management.",
-                        tech: ["Python", "Django"],
-                    },
-                    {
-                        name: "IWMF-Result",
-                        desc: "A Python project for generating festival result pages with dynamic HTML patterns.",
-                        tech: ["Python", "HTML", "Pandas"],
-                    },
-                    {
-                        name: "redkala-autobid",
-                        desc: "Python project for bidding automation on Redkala.com.",
-                        tech: ["Python"],
-                    },
-                    {
-                        name: "fetch-Irancell",
-                        desc: "Web scraper project for extracting Irancell internet data.",
-                        tech: ["Python"],
-                    },
-                    {
-                        name: "Download-music",
-                        desc: "Python project to search and download music using web scraping.",
-                        tech: ["Python"],
-                    },
+                volunteering: [
+                    { role: "Photographer", organization: "Iran Web and Mobile Festival", url: "https://iwmf.ir", period: "Jan 2020 – Mar 2021 · 1 yr 3 mos", cause: "Social Services", description: "Iran Web and Mobile Festival with tens of thousands of participants is the largest competition arena between Iranian mobile websites and software and has played an important role in advancing quality and innovation in the Iranian digital ecosystem." },
+                    { role: "Social Media Manager (Intern)", organization: "Innovation Station", url: "https://innovationstation.ir", period: "Jul 2020 – Sep 2020 · 3 mos", cause: "Social Services", description: "Innovation Station is the first co‑working space in Guilan province. Managed social media presence and content strategy during a 3‑month internship." },
+                    { role: "Social Media Manager", organization: "Realup", url: "#", period: "Sep 2017 – Nov 2017 · 3 mos", cause: "Social Services", description: "Realup explored virtual reality solutions across education, medical, and remote supervision domains; supported outreach and content messaging for early initiatives." },
                 ],
+                projects: [],
                 certifications: [
-                    "Task-Oriented Course in Data Analysis With Python (Quera, Oct 2023)",
-                    "Business Analysis & Process Management (Coursera, Sep 2023)",
-                    "Service-Oriented Architecture (Coursera, Sep 2023)",
-                    "Software Design and Architecture (Coursera, Sep 2023)",
-                    "Design Patterns (Coursera, Jan 2023)",
-                    "Object-Oriented Design (Coursera, Nov 2022)",
-                    "Project-Oriented Course in Backend Development with Django (Quera, Jun 2022)",
-                    "Project-Oriented Course in Front-End Web Development (Quera, Nov 2020)",
+                    { title: "Task-Oriented Course in Data Analysis With Python", issuer: "Quera", issued: "Oct 2023", id: "G4q28PbD", url: "https://quera.org/certificate/G4q28PbD/" },
+                    { title: "Business Analysis & Process Management", issuer: "Coursera", issued: "Sep 2023", id: "YU6SX3XZFX82", url: "https://www.coursera.org/account/accomplishments/certificate/YU6SX3XZFX82" },
+                    { title: "Service-Oriented Architecture", issuer: "Coursera", issued: "Sep 2023", id: "8G8YWGW6GFZ3", url: "https://www.coursera.org/account/accomplishments/certificate/8G8YWGW6GFZ3" },
+                    { title: "Software Design and Architecture Specialization", issuer: "Coursera", issued: "Sep 2023", id: "HMXFYXUPJP8W", url: "https://www.coursera.org/account/accomplishments/specialization/HMXFYXUPJP8W" },
+                    { title: "Design Patterns", issuer: "Coursera", issued: "Jan 2023", id: "QFMKQ5Z4W9N9", url: "https://www.coursera.org/account/accomplishments/certificate/QFMKQ5Z4W9N9" },
+                    { title: "Software Architecture", issuer: "Coursera", issued: "Jan 2023", id: "EXHWDMSBF8L3", url: "https://www.coursera.org/account/accomplishments/certificate/EXHWDMSBF8L3" },
+                    { title: "Object-Oriented Design", issuer: "Coursera", issued: "Nov 2022", id: "MC72Y62E4HPP", url: "https://www.coursera.org/account/accomplishments/verify/MC72Y62E4HPP" },
+                    { title: "Professional Project-Oriented Course in Backend Development with Django", issuer: "Quera", issued: "Jan 2022", id: "hG90q828", url: "https://quera.ir/certificate/hG90q828/" },
+                    { title: "Sharif Career School Course", issuer: "Sharif Career School", issued: "Sep 2021" },
+                    { title: "Project-Oriented Course in Front-End Web Development", issuer: "Quera", issued: "Nov 2020", id: "iVoZEeMv", url: "https://quera.ir/certificate/iVoZEeMv/" },
+                    { title: "Advanced Python Programming and Object-Oriented Thinking Course", issuer: "Quera", issued: "May 2020", id: "V0pBtcRq", url: "https://quera.ir/certificate/V0pBtcRq/" },
+                    { title: "Task-Oriented Course in Fundamentals of Python Programming and Algorithmic Thinking", issuer: "Quera", issued: "Mar 2020", id: "MP5t3rmz", url: "https://quera.ir/certificate/MP5t3rmz/" },
                 ],
             };
 
@@ -847,6 +747,42 @@
                 `;
                     experienceContainer.appendChild(expEl);
                 });
+
+                // VOLUNTEERING
+                const volunteeringList =
+                    document.getElementById("volunteering-list");
+                if (
+                    volunteeringList &&
+                    Array.isArray(resumeData.volunteering)
+                ) {
+                    resumeData.volunteering.forEach((v) => {
+                        const card = document.createElement("article");
+                        card.className = [
+                            "relative rounded-lg",
+                            "bg-gray-50 p-6 shadow-sm hover:shadow-md transition-shadow",
+                            "focus-within:ring-2 focus-within:ring-blue-500/60",
+                        ].join(" ");
+                        const orgLink =
+                            v.url && v.url !== "#"
+                                ? `<a href='${v.url}' target='_blank' rel='noopener' class='text-blue-600 hover:underline font-medium'>${v.organization}</a>`
+                                : `<span class='font-medium'>${v.organization}</span>`;
+                        card.innerHTML = `
+                            <h3 class='text-lg font-semibold text-gray-800'>${
+                                v.role
+                            }</h3>
+                            <p class='mt-1 text-sm text-gray-600'>${orgLink}</p>
+                            <p class='mt-1 text-xs text-gray-500 tracking-wide'>${
+                                v.period
+                            }${v.cause ? " · " + v.cause : ""}</p>
+                            ${
+                                v.description
+                                    ? `<p class='mt-3 text-sm leading-relaxed text-gray-700'>${v.description}</p>`
+                                    : ""
+                            }
+                        `;
+                        volunteeringList.appendChild(card);
+                    });
+                }
 
                 // PROJECTS (Dynamic GitHub Fetch + Fallback)
                 const projectsGrid = document.getElementById("projects-grid");
@@ -1146,9 +1082,7 @@
                                             const tData = await tResp.json();
                                             r.topics = tData.names || [];
                                         }
-                                    } catch (_) {
-                                        /* ignore per-repo topic errors */
-                                    }
+                                    } catch (_) {}
                                 })
                             );
                         }
@@ -1193,9 +1127,53 @@
                 const certsList = document.getElementById(
                     "certifications-list"
                 );
+                function issuerBadge(label) {
+                    return `<span class="inline-block bg-blue-100 text-black rounded-md px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide">${label}</span>`;
+                }
                 resumeData.certifications.forEach((cert) => {
                     const li = document.createElement("li");
-                    li.textContent = cert;
+                    li.className = [
+                        "group rounded-lg",
+                        "bg-gray-50",
+                        "backdrop-blur-sm p-3 shadow-sm hover:shadow-md transition-shadow",
+                        "focus-within:ring-2 focus-within:ring-blue-500/60",
+                    ].join(" ");
+
+                    if (typeof cert === "string") {
+                        li.innerHTML = `<p class='font-medium text-sm text-gray-800 dark:text-gray-100'>${cert}</p>`;
+                        certsList.appendChild(li);
+                        return;
+                    }
+
+                    const badgeEl = cert.issuer
+                        ? `<div class='shrink-0 ml-3 self-start'>${issuerBadge(
+                              cert.issuer.split(" ")[0]
+                          )}</div>`
+                        : "";
+
+                    const header = `
+                        <div class='flex items-start justify-between'>
+                            <h4 class='font-semibold text-sm text-gray-900 leading-snug flex-1'>${cert.title}</h4>
+                            ${badgeEl}
+                        </div>`;
+
+                    const metaBits = [];
+                    if (cert.issuer) metaBits.push(cert.issuer);
+                    if (cert.issued) metaBits.push(cert.issued);
+                    if (cert.expires) metaBits.push(`Exp ${cert.expires}`);
+                    const meta = metaBits.length
+                        ? `<p class='text-[11px] text-gray-500 dark:text-gray-400 mt-1'>${metaBits.join(
+                              " · "
+                          )}</p>`
+                        : "";
+                    const id = cert.id
+                        ? `<p class='text-[10px] tracking-wide text-gray-400 dark:text-gray-500 mt-1'>ID: ${cert.id}</p>`
+                        : "";
+                    const action = cert.url
+                        ? `<a href='${cert.url}' target='_blank' rel='noopener' class='mt-3 inline-flex items-center gap-1 text-[11px] font-medium text-blue-600 dark:text-blue-400 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded' aria-label='Show credential for ${cert.title}'>Show credential<span aria-hidden='true'>→</span></a>`
+                        : "";
+
+                    li.innerHTML = header + meta + id + action;
                     certsList.appendChild(li);
                 });
 
