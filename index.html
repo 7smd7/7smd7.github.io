@@ -278,12 +278,18 @@
                 color: rgba(255, 255, 255, 0.1);
             }
 
-            @keyframes binary-scroll {
-                0% {
-                    transform: translateX(0) translateY(0);
+            .animate-fade-in {
+                animation: fadeIn 0.5s ease-out;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
                 }
-                100% {
-                    transform: translateX(-50%) translateY(-20px);
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
                 }
             }
         </style>
@@ -349,7 +355,7 @@
                         Mohammad Daryani
                     </h1>
                     <p class="mt-4 text-lg md:text-xl text-gray-600">
-                        Software Engineer | BE in Software Engineering
+                        Elite Vibe Coder | One-Man Dev Army
                     </p>
                     <div class="mt-8 flex justify-center space-x-6">
                         <a
@@ -443,6 +449,9 @@
                             </svg>
                         </a>
                     </div>
+                    <div class="mt-8">
+                        <a href="/Mohammad Daryani Resume.pdf" download class="bg-red-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-red-700 transition">📄 Grab My Resume PDF – Unleash the Power!</a>
+                    </div>
                 </div>
             </header>
 
@@ -454,16 +463,70 @@
                     <p
                         class="mt-6 text-lg text-gray-700 leading-relaxed text-center"
                     >
-                        Software Engineer with a Bachelor of Engineering in
-                        Software Engineering from Babol Noshirvani University of
-                        Technology. Experienced in backend and frontend
-                        development with Python, Django, JavaScript, and
-                        Laravel. Strong background in algorithmic
-                        problem-solving, software architecture, and
-                        project-oriented development. Passionate about building
-                        scalable systems, contributing to open-source projects,
-                        and improving user experience through technology.
+                        <strong>🚨 CODE DOMINATOR ALERT: 🚨</strong> Mohammad Daryani is the Vibe Coder who turns impossible into instant. While teams debate, I deploy. While they debug, I innovate. One coder, infinite impact. Python powerhouse, JavaScript juggernaut, Django destroyer. I build what others can't imagine, faster than they can plan. Shockingly efficient, unbelievably fast—your next big hire.
                     </p>
+                    <div class="mt-8 text-center">
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Coder Power Stats</h3>
+                        <div class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-blue-600">0+</div>
+                                <div class="text-sm text-gray-600 dark:text-gray-400">Projects Annihilated</div>
+                            </div>
+                            <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-green-600">0k+</div>
+                                <div class="text-sm text-gray-600 dark:text-gray-400">Lines of Code Forged</div>
+                            </div>
+                            <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-red-600">∞</div>
+                                <div class="text-sm text-gray-600 dark:text-gray-400">Bugs Obliterated</div>
+                            </div>
+                            <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-purple-600">Lightning</div>
+                                <div class="text-sm text-gray-600 dark:text-gray-400">Development Velocity</div>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Team-Beating Efficiency</h3>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-6 mt-4 relative">
+                                <div class="bg-gradient-to-r from-blue-500 to-purple-600 h-6 rounded-full" style="width: 0%"></div>
+                                <div class="absolute inset-0 flex items-center justify-center text-white font-bold">OVER 9000%</div>
+                            </div>
+                            <p class="text-center mt-2 text-gray-600 dark:text-gray-400">Faster than a speeding team</p>
+                        </div>
+                        <div class="mt-8">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">🎮 Unleash the Coder Chronicles! 🎮</h3>
+                            <div class="mt-4 space-y-4">
+                                <button id="unlock-skills" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">🔥 Ignite Skills Inferno</button>
+                                <button id="unlock-experience" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">⚔️ Conquer Experience Realms</button>
+                                <button id="unlock-projects" class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition">🚀 Launch Project Odyssey</button>
+                                <button id="unlock-education" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">🎓 Education Citadel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="why-hire" class="py-16 bg-red-50 dark:bg-red-900/20">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Why Work With Me? The Obvious Choice.</h2>
+                    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-semibold text-blue-600">⚡ Speed Demon</h3>
+                            <p class="mt-2 text-gray-700 dark:text-gray-300">I deliver what teams can't in half the time. Deadlines? Already met.</p>
+                        </div>
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-semibold text-blue-600">🧠 Problem Solver</h3>
+                            <p class="mt-2 text-gray-700 dark:text-gray-300">Bugs? Crushed. Systems? Architected flawlessly. Challenges? Solved.</p>
+                        </div>
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-semibold text-blue-600">🔥 Innovator</h3>
+                            <p class="mt-2 text-gray-700 dark:text-gray-300">Cutting-edge skills from AI to full-stack. Future-proof your projects.</p>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <p class="text-lg text-gray-800 dark:text-gray-200 font-bold">Ready to level up? Let's chat.</p>
+                        <a href="mailto:1mo.daryani@gmail.com" class="mt-4 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition">📧 Hit Me Up</a>
+                    </div>
                 </div>
             </section>
 
@@ -645,6 +708,12 @@
                     { title: "Task-Oriented Course in Fundamentals of Python Programming and Algorithmic Thinking", issuer: "Quera", issued: "Mar 2020", id: "MP5t3rmz", url: "https://quera.ir/certificate/MP5t3rmz/" },
                 ],
             };
+
+            // Hide sections for gamification
+            document.getElementById('skills').style.display = 'none';
+            document.getElementById('experience').style.display = 'none';
+            document.getElementById('projects').style.display = 'none';
+            document.getElementById('education').style.display = 'none';
 
             document.addEventListener("DOMContentLoaded", () => {
                 let skillsChart;
@@ -1233,6 +1302,78 @@
                             : "all";
                         renderSkillsChart(filter);
                     }
+                });
+
+                // Gamification: Animate counters
+                function animateCounter(element, target, suffix = '') {
+                    let current = 0;
+                    const increment = target / 100;
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            current = target;
+                            clearInterval(timer);
+                        }
+                        element.textContent = Math.floor(current) + suffix;
+                    }, 20);
+                }
+
+                // Animate stats on load
+                setTimeout(() => {
+                    const projectsEl = document.querySelector('.text-blue-600');
+                    animateCounter(projectsEl, 50, '+');
+                    const linesEl = document.querySelector('.text-green-600');
+                    animateCounter(linesEl, 100, 'k+');
+                    // Progress bar
+                    const progressBar = document.querySelector('.bg-gradient-to-r');
+                    progressBar.style.transition = 'width 2s ease';
+                    progressBar.style.width = '100%';
+                }, 500);
+
+                // Unlock quests
+                document.getElementById('unlock-skills').addEventListener('click', () => {
+                    const section = document.getElementById('skills');
+                    section.style.display = 'block';
+                    section.classList.add('animate-fade-in');
+                    // Render chart if not already
+                    if (!skillsChart) renderSkillsChart();
+                    section.scrollIntoView({ behavior: 'smooth' });
+                });
+                document.getElementById('unlock-experience').addEventListener('click', () => {
+                    const section = document.getElementById('experience');
+                    section.style.display = 'block';
+                    section.classList.add('animate-fade-in');
+                    section.scrollIntoView({ behavior: 'smooth' });
+                });
+                document.getElementById('unlock-projects').addEventListener('click', () => {
+                    const section = document.getElementById('projects');
+                    section.style.display = 'block';
+                    section.classList.add('animate-fade-in');
+                    section.scrollIntoView({ behavior: 'smooth' });
+                });
+                document.getElementById('unlock-education').addEventListener('click', () => {
+                    const section = document.getElementById('education');
+                    section.style.display = 'block';
+                    section.classList.add('animate-fade-in');
+                    section.scrollIntoView({ behavior: 'smooth' });
+                });
+
+                // Nav links to unlock sections
+                document.querySelector('a[href="#skills"]').addEventListener('click', (e) => {
+                    e.preventDefault();
+                    document.getElementById('unlock-skills').click();
+                });
+                document.querySelector('a[href="#experience"]').addEventListener('click', (e) => {
+                    e.preventDefault();
+                    document.getElementById('unlock-experience').click();
+                });
+                document.querySelector('a[href="#projects"]').addEventListener('click', (e) => {
+                    e.preventDefault();
+                    document.getElementById('unlock-projects').click();
+                });
+                document.querySelector('a[href="#education"]').addEventListener('click', (e) => {
+                    e.preventDefault();
+                    document.getElementById('unlock-education').click();
                 });
             });
         </script>
