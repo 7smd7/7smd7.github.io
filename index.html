@@ -1,1381 +1,308 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!doctype html>
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Mohammad Daryani | Software Engineer</title>
+        <title>Mohammad Daryani — Software Engineer</title>
+
         <meta
             name="description"
-            content="Mohammad Daryani — Software Engineer. Portfolio showcasing skills, experience, projects, and certifications. Full-stack development, Python, JavaScript, and system design."
+            content="Full-stack software engineer. Fast ramp-up, strong team fit, safe delivery. Available for intro calls."
         />
-        <link rel="canonical" href="https://mohammaddaryani.dev/" />
-        <meta name="author" content="Mohammad Daryani" />
-        <meta name="robots" content="index, follow" />
 
-        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://mohammaddaryani.dev/" />
+
+        <!-- Open Graph -->
         <meta
             property="og:title"
             content="Mohammad Daryani — Software Engineer"
         />
         <meta
             property="og:description"
-            content="Portfolio showcasing skills, experience, projects, and certifications."
+            content="Hiring engineers is risky. I reduce that risk by ramping fast and delivering safely."
         />
+        <meta property="og:type" content="website" />
         <meta property="og:url" content="https://mohammaddaryani.dev/" />
-        <meta property="og:site_name" content="Mohammad Daryani" />
         <meta
             property="og:image"
             content="https://mohammaddaryani.dev/assets/og-image.png"
         />
-
-        <meta name="telegram:card" content="summary_large_image" />
-        <meta name="telegram:title" content="Mohammad Daryani — Software Engineer" />
-        <meta name="telegram:description" content="Portfolio showcasing skills, experience, projects, and certifications." />
-        <meta name="telegram:image" content="https://mohammaddaryani.dev/assets/og-image.png" />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-            name="twitter:title"
-            content="Mohammad Daryani — Software Engineer"
-        />
-        <meta
-            name="twitter:description"
-            content="Portfolio showcasing skills, experience, projects, and certifications."
-        />
-        <meta
-            name="twitter:image"
-            content="https://mohammaddaryani.dev/assets/og-image.png"
-        />
-
-        <meta property="og:locale" content="en_US" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
 
-        <!-- Clarity Tracking -->
-        <script type="text/javascript">
-            (function(c,l,a,r,i,t,y){
-                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "tcsae73rx0");
-        </script>
-
-        <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@type": "Person",
-                "name": "Mohammad Daryani",
-                "url": "https://mohammaddaryani.dev/",
-                "sameAs": [
-                    "https://linkedin.com/in/m-daryani/",
-                    "https://github.com/7smd7",
-                    "https://instagram.com/findirisi",
-                    "https://t.me/findirisi"
-                ],
-                "jobTitle": "Software Engineer",
-                "email": "mailto:1mo.daryani@gmail.com"
-            }
-        </script>
-        <script>
-            tailwind = { darkMode: "class" };
-        </script>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
-            rel="stylesheet"
-        />
         <style>
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            html {
+                font-size: 17px;
+            }
+
             body {
-                font-family: "Inter", sans-serif;
-                background-color: #fdfdfb;
-                color: #1a202c;
-                transition: background-color 0.3s ease, color 0.3s ease;
-            }
-            .hero-title {
-                color: #1a202c !important;
-            }
-            .dark .hero-title {
-                color: #f1f5f9 !important;
-            }
-            .nav-title {
-                color: #1a202c !important;
-            }
-            .dark .nav-title {
-                color: #f1f5f9 !important;
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                    sans-serif;
+                line-height: 1.65;
+                color: #111;
+                background: #fff;
+                padding: 0 1.5rem;
             }
 
-            .dark body {
-                background-color: #0f172a;
-                color: #f1f5f9;
+            .page {
+                max-width: 720px;
+                margin: 0 auto;
+                padding: 5rem 0 4rem;
             }
 
-            .dark nav {
-                background: rgba(15, 23, 42, 0.9) !important;
-                border-bottom: 1px solid #374151;
+            .doc-header {
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                color: #888;
+                margin-bottom: 3rem;
+                padding-bottom: 1rem;
+                border-bottom: 1px solid #e5e5e5;
             }
 
-            .dark nav a {
-                color: #cbd5e1 !important;
-            }
-
-            .dark nav a:hover {
-                color: #ffffff !important;
-                background-color: #374151 !important;
-            }
-
-            .dark section {
-                background-color: #0f172a !important;
-            }
-
-            .dark h1,
-            .dark h2,
-            .dark h3 {
-                color: #f1f5f9 !important;
-            }
-
-            .dark p,
-            .dark li {
-                color: #cbd5e1 !important;
-            }
-
-            .dark .bg-white {
-                background-color: #1e293b !important;
-            }
-
-            .dark .bg-gray-50 {
-                background-color: #374151 !important;
-            }
-
-            .dark .text-gray-600,
-            .dark .text-gray-700,
-            .dark .text-gray-800,
-            .dark .text-gray-500 {
-                color: #cbd5e1 !important;
-            }
-
-            .dark .text-gray-900:not(h1) {
-                color: #f1f5f9 !important;
-            }
-
-            .dark .border-gray-300 {
-                border-color: #4b5563 !important;
-            }
-
-            .dark .timeline-item::before {
-                border-color: #0f172a;
-                background-color: #64748b;
-            }
-
-            .dark #experience-timeline h3,
-            .dark #experience-timeline p {
-                color: #f1f5f9 !important;
-            }
-
-            .dark #experience-timeline p:not(:first-of-type) {
-                color: #cbd5e1 !important;
-            }
-
-            .dark .project-card {
-                background-color: #1e293b !important;
-                border: 1px solid #374151 !important;
-            }
-
-            .dark .project-card h3 {
-                color: #f1f5f9 !important;
-            }
-
-            .dark .project-card p {
-                color: #cbd5e1 !important;
-            }
-
-            .dark .skill-filter-btn:not(.bg-gray-700) {
-                background-color: #374151 !important;
-                color: #f1f5f9 !important;
-            }
-
-            .dark .project-filter-btn:not(.bg-gray-700) {
-                background-color: #374151 !important;
-                color: #f1f5f9 !important;
-            }
-
-            footer {
-                background-color: #1f2937 !important;
-            }
-
-            .dark footer {
-                background-color: #0f172a !important;
-            }
-
-            .dark * {
-                border-color: #4b5563;
-            }
-
-            .dark .text-gray-900:not(h1),
-            .dark .text-gray-800,
-            .dark .text-gray-700,
-            .dark .text-gray-600,
-            .dark .text-gray-500 {
-                color: #f1f5f9 !important;
-            }
-
-            .dark span[class*="bg-gray-200"] {
-                background-color: #4b5563 !important;
-                color: #f1f5f9 !important;
-            }
-
-            .chart-container {
-                position: relative;
-                width: 100%;
-                max-width: 800px;
-                margin-left: auto;
-                margin-right: auto;
-                height: 400px;
-                max-height: 50vh;
-            }
-            @media (min-width: 768px) {
-                .chart-container {
-                    height: 500px;
-                }
-            }
-            .timeline-item::before {
-                content: "";
-                position: absolute;
-                left: -2.75rem;
-                top: 0;
-                width: 20px;
-                height: 20px;
-                border-radius: 50%;
-                background-color: #4a5568;
-                border: 4px solid #fdfdfb;
-            }
-
-            header:first-of-type {
-                position: relative;
-                overflow: hidden;
-            }
-
-            header:first-of-type::before {
-                content: "010101010101010101010101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101101010101010101010101010110101010101010101010101011010101010101010101010101";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 300%;
-                height: 200%;
-                font-family: "Courier New", monospace;
-                font-size: 20px;
+            h1 {
+                font-size: 2.1rem;
+                font-weight: 600;
+                letter-spacing: -0.02em;
                 line-height: 1.2;
-                color: rgba(0, 0, 0, 0.1);
-                white-space: pre-wrap;
-                word-break: break-all;
-                z-index: -1;
-                animation: binary-scroll 60s linear infinite;
+                margin-bottom: 0.3rem;
             }
 
-            .dark header:first-of-type::before {
-                color: rgba(255, 255, 255, 0.1);
+            .role {
+                font-size: 1rem;
+                color: #666;
+                margin-bottom: 2.5rem;
             }
 
-            .animate-fade-in {
-                animation: fadeIn 0.5s ease-out;
+            .lead {
+                font-size: 1.15rem;
+                margin-bottom: 2rem;
+                color: #333;
             }
 
-            @keyframes fadeIn {
-                from {
-                    opacity: 0;
-                    transform: translateY(20px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
+            .lead strong {
+                color: #111;
+            }
+
+            .human-note {
+                font-size: 0.95rem;
+                color: #444;
+                margin-bottom: 3rem;
+            }
+
+            hr {
+                border: none;
+                border-top: 1px solid #e5e5e5;
+                margin: 2.5rem 0;
+            }
+
+            h2 {
+                font-size: 1rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+                margin-bottom: 1rem;
+            }
+
+            .timeline {
+                list-style: none;
+            }
+
+            .timeline li {
+                display: grid;
+                grid-template-columns: 6rem 1fr;
+                gap: 1rem;
+                margin-bottom: 0.75rem;
+                font-size: 0.95rem;
+            }
+
+            .timeline-label {
+                font-weight: 600;
+            }
+
+            .evidence {
+                list-style: none;
+            }
+
+            .evidence li {
+                margin-bottom: 0.5rem;
+                padding-left: 1rem;
+                position: relative;
+                font-size: 0.95rem;
+                color: #444;
+            }
+
+            .evidence li::before {
+                content: "—";
+                position: absolute;
+                left: 0;
+                color: #999;
+            }
+
+            .availability {
+                background: #f8f8f8;
+                padding: 1rem 1.25rem;
+                margin: 2rem 0;
+                font-size: 0.9rem;
+            }
+
+            .contact-links {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.75rem 1.25rem;
+            }
+
+            a {
+                color: #0066cc;
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            .contact-primary {
+                font-weight: 600;
+            }
+
+            .doc-footer {
+                margin-top: 3rem;
+                padding-top: 1.5rem;
+                border-top: 1px solid #e5e5e5;
+                font-size: 0.75rem;
+                color: #999;
+            }
+
+            .doc-footer-right {
+                float: right;
             }
         </style>
     </head>
-    <body class="antialiased">
-        <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex items-center justify-between h-16">
-                    <div class="flex items-center">
-                        <span
-                            class="nav-title font-bold text-xl text-gray-600 dark:text-white"
-                            >Mohammad Daryani</span
-                        >
-                    </div>
-                    <div class="flex items-center space-x-4">
-                        <div class="hidden md:block">
-                            <div class="ml-10 flex items-baseline space-x-4">
-                                <a
-                                    href="#summary"
-                                    class="text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
-                                    >About</a
-                                >
-                                <a
-                                    href="#skills"
-                                    class="text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
-                                    >Skills</a
-                                >
-                                <a
-                                    href="#experience"
-                                    class="text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
-                                    >Experience</a
-                                >
-                                <a
-                                    href="#projects"
-                                    class="text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
-                                    >Projects</a
-                                >
-                                <a
-                                    href="#education"
-                                    class="text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
-                                    >Education</a
-                                >
-                            </div>
-                        </div>
-                        <button
-                            id="theme-toggle"
-                            class="p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white focus:outline-none"
-                            aria-label="Toggle theme"
-                        >
-                            <span id="theme-icon">🌙</span>
-                        </button>
-                    </div>
-                </div>
+
+    <body>
+        <main class="page">
+            <div class="doc-header">Candidate Brief · Software Engineer</div>
+
+            <h1>Mohammad Daryani</h1>
+            <p class="role">Full-stack Software Engineer</p>
+
+            <p class="lead">
+                <strong>Hiring engineers is risky.</strong> I reduce that risk
+                by <strong>ramping fast</strong>,
+                <strong>fitting teams</strong>, and
+                <strong>delivering safely</strong>. I usually ship production
+                code in my first week, learn how your team works before
+                proposing changes, and
+                <strong>optimize for clarity over cleverness</strong>—leaving
+                systems easier to maintain than I found them.
+            </p>
+
+            <hr />
+
+            <h2>What my first month looks like</h2>
+            <ul class="timeline">
+                <li>
+                    <span class="timeline-label">Week 1</span>
+                    <span
+                        >Environment setup. Read docs. Ship a small fix. Ask
+                        clarifying questions.</span
+                    >
+                </li>
+                <li>
+                    <span class="timeline-label">Week 2</span>
+                    <span
+                        >Pair with teammates. Learn patterns. Take real
+                        tasks.</span
+                    >
+                </li>
+                <li>
+                    <span class="timeline-label">Weeks 3–4</span>
+                    <span
+                        >Own a feature end-to-end. Push to production with
+                        tests.</span
+                    >
+                </li>
+            </ul>
+
+            <hr />
+
+            <h2>Experience in practice</h2>
+            <ul class="evidence">
+                <li>Built and maintained production systems in real teams</li>
+                <li>Full-stack ownership: Django, Laravel, Next.js</li>
+                <li>Delivered working software in weeks, not months</li>
+            </ul>
+
+            <hr />
+
+            <h2>Best fit for</h2>
+            <ul class="evidence">
+                <li>Teams that need someone productive quickly</li>
+                <li>Full-stack, backend, or frontend roles</li>
+                <li>Companies that value ownership and clear communication</li>
+            </ul>
+
+            <div class="availability">
+                <strong>Based in Armenia.</strong> Open to remote work or
+                relocation.
+                <br />
+                Available for a 15-minute intro call — no commitment required.
+                <br /><br />
+                Compensation is flexible at entry and can be reviewed based on
+                impact after 3–6 months.
             </div>
-        </nav>
 
-        <main>
-            <header class="py-20 md:py-24">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h1
-                        class="hero-title text-4xl md:text-6xl font-bold tracking-tight text-gray-900 dark:text-white"
-                    >
-                        Mohammad Daryani
-                    </h1>
-                    <p class="mt-4 text-lg md:text-xl text-gray-600">
-                        Elite Vibe Coder | One-Man Dev Army
-                    </p>
-                    <div class="mt-8 flex justify-center space-x-6">
-                        <a
-                            href="https://linkedin.com/in/m-daryani/"
-                            target="_blank"
-                            rel="noopener"
-                            class="text-gray-500 hover:text-gray-900"
-                        >
-                            <span class="sr-only">LinkedIn</span>
-                            <svg
-                                class="h-6 w-6"
-                                fill="currentColor"
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                            >
-                                <path
-                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
-                                />
-                            </svg>
-                        </a>
-                        <a
-                            href="https://github.com/7smd7"
-                            target="_blank"
-                            rel="noopener"
-                            class="text-gray-500 hover:text-gray-900"
-                        >
-                            <span class="sr-only">GitHub</span>
-                            <svg
-                                class="h-6 w-6"
-                                fill="currentColor"
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                            >
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-                                />
-                            </svg>
-                        </a>
-                        <a
-                            href="mailto:1mo.daryani@gmail.com"
-                            class="text-gray-500 hover:text-gray-900"
-                        >
-                            <span class="sr-only">Email</span>
-                            <svg
-                                class="h-6 w-6"
-                                fill="currentColor"
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                            >
-                                <path
-                                    fill-rule="evenodd"
-                                    d="M1.5 6.75A3.75 3.75 0 0 1 5.25 3h13.5A3.75 3.75 0 0 1 22.5 6.75v10.5A3.75 3.75 0 0 1 18.75 21H5.25A3.75 3.75 0 0 1 1.5 17.25V6.75Zm3.26-.818a.75.75 0 0 0-.82 1.248l7.5 4.928a.75.75 0 0 0 .82 0l7.5-4.928a.75.75 0 0 0-.82-1.248L12 11.31 4.76 5.932Z"
-                                    clip-rule="evenodd"
-                                />
-                            </svg>
-                        </a>
-                        <a
-                            href="https://t.me/findirisi"
-                            target="_blank"
-                            rel="noopener"
-                            class="text-gray-500 hover:text-gray-900"
-                        >
-                            <span class="sr-only">Telegram</span>
-                            <svg
-                                class="h-6 w-6"
-                                fill="currentColor"
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                            >
-                                <path
-                                    d="M21.8 4.2a1.5 1.5 0 0 0-1.52-.18L3.66 11.24a1.5 1.5 0 0 0 .1 2.78l3.9 1.35 1.5 4.52a1.5 1.5 0 0 0 2.46.6l2.63-2.63 3.74 2.5a1.5 1.5 0 0 0 2.28-.94l2.25-13a1.5 1.5 0 0 0-.66-1.52zm-6.9 5.07-5.44 5.17a.75.75 0 0 0-.21.4l-.36 2.05-.73-2.2a.75.75 0 0 1 .07-.64l4.33-6.7a.75.75 0 0 1 1.34.52z"
-                                />
-                            </svg>
-                        </a>
-                        <a
-                            href="https://instagram.com/findirisi"
-                            target="_blank"
-                            rel="noopener"
-                            class="text-gray-500 hover:text-gray-900"
-                        >
-                            <span class="sr-only">Instagram</span>
-                            <svg
-                                class="h-6 w-6"
-                                fill="currentColor"
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                            >
-                                <path
-                                    d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm5.25-.88a1.12 1.12 0 1 1 0 2.25 1.12 1.12 0 0 1 0-2.25z"
-                                />
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="mt-12">
-                        <a href="/Mohammmad%20Daryani%20Resume.pdf" download class="bg-red-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-red-700 transition">📄 Grab My Resume PDF – Unleash the Power!</a>
-                    </div>
-                </div>
-            </header>
+            <hr />
 
-            <section id="summary" class="py-16 bg-white">
-                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 class="text-3xl font-bold text-center text-gray-900">
-                        About Me
-                    </h2>
-                    <p
-                        class="mt-6 text-lg text-gray-700 leading-relaxed text-center"
-                    >
-                        <strong>🚨 CODE DOMINATOR ALERT: 🚨</strong> Mohammad Daryani is the Vibe Coder who turns impossible into instant. While teams debate, I deploy. While they debug, I innovate. One coder, infinite impact. Python powerhouse, JavaScript juggernaut, Django destroyer. I build what others can't imagine, faster than they can plan. Shockingly efficient, unbelievably fast—your next big hire.
-                    </p>
-                    <div class="mt-8 text-center">
-                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Coder Power Stats</h3>
-                        <div class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-4">
-                            <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg">
-                                <div class="text-2xl font-bold text-blue-600">0+</div>
-                                <div class="text-sm text-gray-600 dark:text-gray-400">Projects Annihilated</div>
-                            </div>
-                            <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg">
-                                <div class="text-2xl font-bold text-green-600">0k+</div>
-                                <div class="text-sm text-gray-600 dark:text-gray-400">Lines of Code Forged</div>
-                            </div>
-                            <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg">
-                                <div class="text-2xl font-bold text-red-600">∞</div>
-                                <div class="text-sm text-gray-600 dark:text-gray-400">Bugs Obliterated</div>
-                            </div>
-                            <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg">
-                                <div class="text-2xl font-bold text-purple-600">Lightning</div>
-                                <div class="text-sm text-gray-600 dark:text-gray-400">Development Velocity</div>
-                            </div>
-                        </div>
-                        <div class="mt-8">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Team-Beating Efficiency</h3>
-                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-6 mt-4 relative">
-                                <div class="bg-gradient-to-r from-blue-500 to-purple-600 h-6 rounded-full" style="width: 0%"></div>
-                                <div class="absolute inset-0 flex items-center justify-center text-white font-bold">OVER 9000%</div>
-                            </div>
-                            <p class="text-center mt-2 text-gray-600 dark:text-gray-400">Faster than a speeding team</p>
-                        </div>
-                        <div class="mt-8">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">🎮 Unleash the Coder Chronicles! 🎮</h3>
-                            <div class="mt-4 space-y-4">
-                                <button id="unlock-skills" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">🔥 Ignite Skills Inferno</button>
-                                <button id="unlock-experience" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">⚔️ Conquer Experience Realms</button>
-                                <button id="unlock-projects" class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition">🚀 Launch Project Odyssey</button>
-                                <button id="unlock-education" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">🎓 Education Citadel</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <h2>Next step</h2>
+            <p>If this matches what you're looking for:</p>
 
-            <section id="why-hire" class="py-16 bg-red-50 dark:bg-red-900/20">
-                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Why Work With Me? The Obvious Choice.</h2>
-                    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
-                            <h3 class="text-xl font-semibold text-blue-600">⚡ Speed Demon</h3>
-                            <p class="mt-2 text-gray-700 dark:text-gray-300">I deliver what teams can't in half the time. Deadlines? Already met.</p>
-                        </div>
-                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
-                            <h3 class="text-xl font-semibold text-blue-600">🧠 Problem Solver</h3>
-                            <p class="mt-2 text-gray-700 dark:text-gray-300">Bugs? Crushed. Systems? Architected flawlessly. Challenges? Solved.</p>
-                        </div>
-                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
-                            <h3 class="text-xl font-semibold text-blue-600">🔥 Innovator</h3>
-                            <p class="mt-2 text-gray-700 dark:text-gray-300">Cutting-edge skills from AI to full-stack. Future-proof your projects.</p>
-                        </div>
-                    </div>
-                    <div class="mt-8">
-                        <p class="text-lg text-gray-800 dark:text-gray-200 font-bold">Ready to level up? Let's chat.</p>
-                        <a href="mailto:1mo.daryani@gmail.com" class="mt-4 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition">📧 Hit Me Up</a>
-                    </div>
-                </div>
-            </section>
+            <div class="contact-links">
+                <a href="tel:+37493500374" class="contact-primary"
+                    >Schedule a call</a
+                >
+                <a
+                    href="https://t.me/findirisi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Telegram</a
+                >
+                <a href="mailto:1mo.daryani@gmail.com">Email</a>
+                <a
+                    href="https://linkedin.com/in/m-daryani/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >LinkedIn</a
+                >
+                <a
+                    href="https://github.com/7smd7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub</a
+                >
+                <a
+                    href="/MohammadDaryaniResume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Resume</a
+                >
+            </div>
 
-            <section id="skills" class="py-16">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 class="text-3xl font-bold text-center text-gray-900">
-                        Technical Skills
-                    </h2>
-                    <p class="mt-4 text-lg text-gray-600 text-center">
-                        This chart showcases my proficiency across different
-                        technologies. You can use the buttons below to filter
-                        the skills by category and get a more focused view of my
-                        expertise.
-                    </p>
-                    <div class="mt-8 text-center space-x-2 space-y-2" id="skill-filters">
-                        <button
-                            class="skill-filter-btn bg-gray-700 text-white px-4 py-2 rounded-md"
-                            data-filter="all"
-                        >
-                            All
-                        </button>
-                        <button
-                            class="skill-filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-md"
-                            data-filter="languages"
-                        >
-                            Languages
-                        </button>
-                        <button
-                            class="skill-filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-md"
-                            data-filter="frameworks"
-                        >
-                            Frameworks
-                        </button>
-                        <button
-                            class="skill-filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-md"
-                            data-filter="databases"
-                        >
-                            Databases
-                        </button>
-                        <button
-                            class="skill-filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-md"
-                            data-filter="tools"
-                        >
-                            Tools
-                        </button>
-                    </div>
-                    <div class="mt-8 chart-container">
-                        <canvas id="skillsChart"></canvas>
-                    </div>
-                </div>
-            </section>
-
-            <section id="experience" class="py-16 bg-white">
-                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 class="text-3xl font-bold text-center text-gray-900">
-                        Professional Experience
-                    </h2>
-                    <p class="mt-4 text-lg text-gray-600 text-center">
-                        Here is a timeline of my professional journey,
-                        highlighting key roles and responsibilities. Each
-                        position has contributed to my growth as a software
-                        engineer, providing me with diverse challenges and
-                        learning opportunities.
-                    </p>
-                    <div
-                        class="mt-12 relative border-l-2 border-gray-300 ml-10"
-                    >
-                        <div id="experience-timeline" class="space-y-12"></div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="projects" class="py-16">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 class="text-3xl font-bold text-center text-gray-900">
-                        Projects
-                    </h2>
-                    <p
-                        class="mt-4 text-lg text-gray-600 text-center max-w-3xl mx-auto"
-                    >
-                        I believe in learning by doing. This gallery features a
-                        selection of my personal and academic projects. Use the
-                        filters to explore projects based on the technologies
-                        used.
-                    </p>
-                    <div
-                        class="mt-8 text-center space-x-2 space-y-2"
-                        id="project-filters"
-                    >
-                        <button
-                            class="project-filter-btn bg-gray-700 text-white px-4 py-2 rounded-md"
-                            data-filter="all"
-                        >
-                            All
-                        </button>
-                    </div>
-                    <div
-                        id="projects-grid"
-                        class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3"
-                    ></div>
-                </div>
-            </section>
-
-            <section id="education" class="py-16 bg-white">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 class="text-3xl font-bold text-center text-gray-900">Education, Certifications & Volunteering</h2>
-                    <div class="mt-12 grid md:grid-cols-2 gap-12">
-                        <div>
-                            <h3 class="text-2xl font-semibold text-gray-800">Education</h3>
-                            <div class="mt-6 space-y-6">
-                                <div class="bg-gray-50 p-6 rounded-lg">
-                                    <p class="font-bold text-lg">Bachelor of Engineering, Computer Software Engineering</p>
-                                    <p class="text-gray-600">Babol Noshirvani University of Technology (BNUT)</p>
-                                    <p class="text-sm text-gray-500">2017 – 2021</p>
-                                </div>
-                                <div class="bg-gray-50 p-6 rounded-lg">
-                                    <p class="font-bold text-lg">High School Diploma, Mathematics</p>
-                                    <p class="text-gray-600">National Organization for Development of Exceptional Talents (Sampad)</p>
-                                    <p class="text-sm text-gray-500">2010 – 2017</p>
-                                </div>
-                            </div>
-                            <h3 class="mt-10 text-xl font-semibold text-gray-800">Volunteering</h3>
-                            <p class="mt-2 text-sm text-gray-600 leading-relaxed">
-                                These roles are outside my core software engineering track, but they helped me build strong communication, community presence, content/storytelling skills, and long‑term relationships within the broader tech ecosystem.
-                            </p>
-                            <div id="volunteering-list" class="mt-6 space-y-6"></div>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-semibold text-gray-800">Certifications</h3>
-                            <ul id="certifications-list" class="mt-6 grid gap-5 sm:grid-cols-2 list-none p-0" role="list"></ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        <script>
-            const resumeData = {
-                skills: {
-                    all: [
-                        { name: "Python", value: 90, type: "languages" },
-                        { name: "Django", value: 90, type: "frameworks" },
-                        { name: "JavaScript", value: 85, type: "languages" },
-                        { name: "Next.js", value: 80, type: "frameworks" },
-                        { name: "PHP", value: 70, type: "languages" },
-                        { name: "Laravel", value: 75, type: "frameworks" },
-                        { name: "Prompt Engineering", value: 90, type: "tools" },
-                        { name: "PostgreSQL", value: 75, type: "databases" },
-                        { name: "Git", value: 70, type: "tools" },
-                        { name: "Docker", value: 60, type: "tools" },
-                        { name: "REST APIs", value: 80, type: "tools" },
-                    ],
-                    get languages() { return this.all.filter(s=>s.type==='languages'); },
-                    get frameworks() { return this.all.filter(s=>s.type==='frameworks'); },
-                    get databases() { return this.all.filter(s=>s.type==='databases'); },
-                    get tools() { return this.all.filter(s=>s.type==='tools'); },
-                },
-                experience: [
-                    { title: "Software Engineer (Fullstack - Laravel)", company: "Iran Web and Mobile Festival (IWMF)", url: "https://iwmf.ir", period: "May 2025 – Present (Part-time)", description: "Full-stack Laravel developer at the Iran Web and Mobile Festival (IWMF)—the country’s largest and longest-running digital competition platform. Led development of the internal management panel, delivering new features to support operational workflows and enhance user experience." },
-                    { title: "Software Engineer (Frontend - Next.js)", company: "Eshareh Communication Agency", url: "https://eshareh.com", period: "Nov 2024 – Apr 2025 (Full-time)", description: "Developed responsive front-end interfaces for a new startup under Eshareh Communication Agency, using Next.js with REST API integrations and CI/CD pipelines to deliver scalable, production-ready web applications." },
-                    { title: "Software Engineer (Backend - Django)", company: "Triboon (sub-company of Yektanet)", url: "https://triboon.net", period: "Nov 2021 – Apr 2022 (Full-time)", description: "Contributed to backend development for Triboon, a digital PR and SEO platform under Yektanet, building scalable services with Python (Django), Celery, REST APIs, CI/CD pipelines, and Sentry for monitoring." },
-                ],
-                volunteering: [
-                    { role: "Photographer", organization: "Iran Web and Mobile Festival", url: "https://iwmf.ir", period: "Jan 2020 – Mar 2021 · 1 yr 3 mos", cause: "Social Services", description: "Iran Web and Mobile Festival with tens of thousands of participants is the largest competition arena between Iranian mobile websites and software and has played an important role in advancing quality and innovation in the Iranian digital ecosystem." },
-                    { role: "Social Media Manager (Intern)", organization: "Innovation Station", url: "https://innovationstation.ir", period: "Jul 2020 – Sep 2020 · 3 mos", cause: "Social Services", description: "Innovation Station is the first co‑working space in Guilan province. Managed social media presence and content strategy during a 3‑month internship." },
-                    { role: "Social Media Manager", organization: "Realup", url: "#", period: "Sep 2017 – Nov 2017 · 3 mos", cause: "Social Services", description: "Realup explored virtual reality solutions across education, medical, and remote supervision domains; supported outreach and content messaging for early initiatives." },
-                ],
-                projects: [],
-                certifications: [
-                    { title: "Task-Oriented Course in Data Analysis With Python", issuer: "Quera", issued: "Oct 2023", id: "G4q28PbD", url: "https://quera.org/certificate/G4q28PbD/" },
-                    { title: "Business Analysis & Process Management", issuer: "Coursera", issued: "Sep 2023", id: "YU6SX3XZFX82", url: "https://www.coursera.org/account/accomplishments/certificate/YU6SX3XZFX82" },
-                    { title: "Service-Oriented Architecture", issuer: "Coursera", issued: "Sep 2023", id: "8G8YWGW6GFZ3", url: "https://www.coursera.org/account/accomplishments/certificate/8G8YWGW6GFZ3" },
-                    { title: "Software Design and Architecture Specialization", issuer: "Coursera", issued: "Sep 2023", id: "HMXFYXUPJP8W", url: "https://www.coursera.org/account/accomplishments/specialization/HMXFYXUPJP8W" },
-                    { title: "Design Patterns", issuer: "Coursera", issued: "Jan 2023", id: "QFMKQ5Z4W9N9", url: "https://www.coursera.org/account/accomplishments/certificate/QFMKQ5Z4W9N9" },
-                    { title: "Software Architecture", issuer: "Coursera", issued: "Jan 2023", id: "EXHWDMSBF8L3", url: "https://www.coursera.org/account/accomplishments/certificate/EXHWDMSBF8L3" },
-                    { title: "Object-Oriented Design", issuer: "Coursera", issued: "Nov 2022", id: "MC72Y62E4HPP", url: "https://www.coursera.org/account/accomplishments/verify/MC72Y62E4HPP" },
-                    { title: "Professional Project-Oriented Course in Backend Development with Django", issuer: "Quera", issued: "Jan 2022", id: "hG90q828", url: "https://quera.ir/certificate/hG90q828/" },
-                    { title: "Sharif Career School Course", issuer: "Sharif Career School", issued: "Sep 2021" },
-                    { title: "Project-Oriented Course in Front-End Web Development", issuer: "Quera", issued: "Nov 2020", id: "iVoZEeMv", url: "https://quera.ir/certificate/iVoZEeMv/" },
-                    { title: "Advanced Python Programming and Object-Oriented Thinking Course", issuer: "Quera", issued: "May 2020", id: "V0pBtcRq", url: "https://quera.ir/certificate/V0pBtcRq/" },
-                    { title: "Task-Oriented Course in Fundamentals of Python Programming and Algorithmic Thinking", issuer: "Quera", issued: "Mar 2020", id: "MP5t3rmz", url: "https://quera.ir/certificate/MP5t3rmz/" },
-                ],
-            };
-
-            // Hide sections for gamification
-            document.getElementById('skills').style.display = 'none';
-            document.getElementById('experience').style.display = 'none';
-            document.getElementById('projects').style.display = 'none';
-            document.getElementById('education').style.display = 'none';
-
-            document.addEventListener("DOMContentLoaded", () => {
-                let skillsChart;
-
-                function renderSkillsChart(filter = "all") {
-                    const skillsToShow = resumeData.skills[filter];
-                    const ctx = document
-                        .getElementById("skillsChart")
-                        .getContext("2d");
-                    const isDark =
-                        document.documentElement.classList.contains("dark");
-
-                    // Theme-aware colors
-                    const colors = isDark
-                        ? {
-                              bg: "rgba(148, 163, 184, 0.8)",
-                              border: "rgba(226, 232, 240, 1)",
-                              grid: "rgba(75, 85, 99, 0.35)",
-                              text: "#f1f5f9",
-                          }
-                        : {
-                              bg: "rgba(74, 85, 104, 0.8)",
-                              border: "rgba(45, 55, 72, 1)",
-                              grid: "rgba(229, 231, 235, 0.5)",
-                              text: "#1f2937",
-                          };
-
-                    if (skillsChart) {
-                        skillsChart.destroy();
-                    }
-
-                    skillsChart = new Chart(ctx, {
-                        type: "bar",
-                        data: {
-                            labels: skillsToShow.map((s) => s.name),
-                            datasets: [
-                                {
-                                    label: "Proficiency",
-                                    data: skillsToShow.map((s) => s.value),
-                                    backgroundColor: colors.bg,
-                                    borderColor: colors.border,
-                                    borderWidth: 1,
-                                },
-                            ],
-                        },
-                        options: {
-                            indexAxis: "y",
-                            responsive: true,
-                            maintainAspectRatio: false,
-                            scales: {
-                                x: {
-                                    beginAtZero: true,
-                                    max: 100,
-                                    grid: { color: colors.grid },
-                                    ticks: { color: colors.text },
-                                },
-                                y: {
-                                    grid: { color: colors.grid },
-                                    ticks: { color: colors.text },
-                                },
-                            },
-                            plugins: {
-                                legend: { display: false },
-                                tooltip: {
-                                    backgroundColor: isDark
-                                        ? "rgba(15,23,42,0.95)"
-                                        : "rgba(255,255,255,0.95)",
-                                    titleColor: colors.text,
-                                    bodyColor: colors.text,
-                                    borderColor: colors.border,
-                                    borderWidth: 1,
-                                    callbacks: {
-                                        label: function (context) {
-                                            return `Proficiency: ${context.raw}%`;
-                                        },
-                                    },
-                                },
-                            },
-                            animation: { duration: 400 },
-                        },
-                    });
-                }
-
-                const skillFilterButtons =
-                    document.querySelectorAll(".skill-filter-btn");
-                skillFilterButtons.forEach((btn) => {
-                    btn.addEventListener("click", () => {
-                        skillFilterButtons.forEach((b) =>
-                            b.classList.remove("bg-gray-700", "text-white")
-                        );
-                        skillFilterButtons.forEach((b) =>
-                            b.classList.add("bg-gray-200", "text-gray-800")
-                        );
-                        btn.classList.add("bg-gray-700", "text-white");
-                        btn.classList.remove("bg-gray-200", "text-gray-800");
-                        renderSkillsChart(btn.dataset.filter);
-                    });
-                });
-
-                // removed initial render; will render after theme initialization for correct colors
-
-                const experienceContainer = document.getElementById(
-                    "experience-timeline"
-                );
-                resumeData.experience.forEach((exp) => {
-                    const expEl = document.createElement("div");
-                    expEl.className = "timeline-item relative pl-8";
-                    expEl.innerHTML = `
-                    <h3 class="text-xl font-semibold text-gray-800">${exp.title}</h3>
-                    <a href="${exp.url}" target="_blank" rel="noopener" class="inline-flex items-center text-md font-medium text-gray-600 hover:text-gray-900 group">
-                        <span>${exp.company}</span>
-                        <svg class="w-4 h-4 ml-1 text-gray-400 transition-colors duration-200 group-hover:text-gray-700 dark:group-hover:text-gray-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5M21 3l-9.75 9.75M15.75 3H21v5.25"/>
-                        </svg>
-                    </a>
-                    <p class="text-sm text-gray-500 mb-2">${exp.period}</p>
-                    <p class="text-gray-700">${exp.description}</p>
-                `;
-                    experienceContainer.appendChild(expEl);
-                });
-
-                // VOLUNTEERING
-                const volunteeringList =
-                    document.getElementById("volunteering-list");
-                if (
-                    volunteeringList &&
-                    Array.isArray(resumeData.volunteering)
-                ) {
-                    resumeData.volunteering.forEach((v) => {
-                        const card = document.createElement("article");
-                        card.className = [
-                            "relative rounded-lg",
-                            "bg-gray-50 p-6 shadow-sm hover:shadow-md transition-shadow",
-                            "focus-within:ring-2 focus-within:ring-blue-500/60",
-                        ].join(" ");
-                        const orgLink =
-                            v.url && v.url !== "#"
-                                ? `<a href='${v.url}' target='_blank' rel='noopener' class='text-blue-600 hover:underline font-medium'>${v.organization}</a>`
-                                : `<span class='font-medium'>${v.organization}</span>`;
-                        card.innerHTML = `
-                            <h3 class='text-lg font-semibold text-gray-800'>${
-                                v.role
-                            }</h3>
-                            <p class='mt-1 text-sm text-gray-600'>${orgLink}</p>
-                            <p class='mt-1 text-xs text-gray-500 tracking-wide'>${
-                                v.period
-                            }${v.cause ? " · " + v.cause : ""}</p>
-                            ${
-                                v.description
-                                    ? `<p class='mt-3 text-sm leading-relaxed text-gray-700'>${v.description}</p>`
-                                    : ""
-                            }
-                        `;
-                        volunteeringList.appendChild(card);
-                    });
-                }
-
-                // PROJECTS (Dynamic GitHub Fetch + Fallback)
-                const projectsGrid = document.getElementById("projects-grid");
-                const projectFiltersContainer =
-                    document.getElementById("project-filters");
-                const GITHUB_USERNAME = "7smd7";
-                let dynamicProjectsLoaded = false;
-
-                // Category definitions (lowercase tokens)
-                const TAG_CATEGORIES = {
-                    Languages: [
-                        "python",
-                        "python3",
-                        "python-3",
-                        "python36",
-                        "javascript",
-                        "java",
-                        "java8",
-                        "java-8",
-                        "c",
-                        "c++",
-                        "c-plus-plus",
-                        "sql",
-                        "plpgsql",
-                        "verilog",
-                        "verilog-hdl",
-                        "vhdl",
-                        "mips",
-                        "hdl",
-                    ],
-                    "Frameworks & Libraries": [
-                        "django",
-                        "django-rest-framework",
-                        "react",
-                        "reactjs",
-                        "selenium",
-                        "selenium-python",
-                        "selenium-script",
-                        "selenium-webdriver",
-                        "qt",
-                        "pyqt5",
-                        "phantomjs",
-                        "celery",
-                    ],
-                    "Data & AI": [
-                        "pandas",
-                        "numpy",
-                        "data-visualization",
-                        "data-preparation",
-                        "data-migration",
-                        "bi",
-                        "business-intelligence",
-                        "algorithm-design",
-                        "artificial-intelligence",
-                        "machine-learning",
-                        "maching-learning",
-                        "influence-maximization",
-                    ],
-                    "Trading & Finance": [
-                        "trading",
-                        "trading-bot",
-                        "tradingbot",
-                        "auto-trader",
-                        "autotrader",
-                        "algorithmic-trading",
-                        "exchange",
-                        "financial",
-                        "websocket",
-                        "bidding-bot",
-                    ],
-                    "Automation & Bots": [
-                        "automation",
-                        "telegrambot",
-                        "telegram",
-                        "bidding-bot",
-                        "autotrader",
-                        "auto-trader",
-                        "selenium",
-                        "selenium-python",
-                        "selenium-script",
-                        "selenium-webdriver",
-                    ],
-                    "Systems & Architecture": [
-                        "compiler",
-                        "compiler-cpp",
-                        "compiler-design",
-                        "computer-architecture",
-                        "single-cycle-processor",
-                        "cpu",
-                        "interpreter",
-                    ],
-                    "Education & Learning": [
-                        "educational",
-                        "exam",
-                        "entrance-exam",
-                        "interview-questions",
-                        "object-oriented-programming",
-                        "oop",
-                    ],
-                };
-
-                function allCategorizedTokens() {
-                    return new Set(Object.values(TAG_CATEGORIES).flat());
-                }
-
-                function tokensForCategory(catName, allTokens) {
-                    if (catName === "Misc") {
-                        const categorized = allCategorizedTokens();
-                        return [...allTokens].filter(
-                            (t) => !categorized.has(t.toLowerCase())
-                        );
-                    }
-                    return TAG_CATEGORIES[catName] || [];
-                }
-
-                function rebuildProjectFilters(projects) {
-                    // Clear existing (keep none; we'll rebuild including 'All')
-                    projectFiltersContainer.innerHTML = "";
-                    const allBtn = document.createElement("button");
-                    allBtn.className =
-                        "project-filter-btn bg-gray-700 text-white px-4 py-2 rounded-md";
-                    allBtn.dataset.filter = "all";
-                    allBtn.textContent = "All";
-                    projectFiltersContainer.appendChild(allBtn);
-
-                    // Collect all tokens from projects
-                    const tokenSet = new Set();
-                    projects.forEach((p) =>
-                        p.tech.forEach((t) => tokenSet.add(t))
-                    );
-                    const lowerTokens = [...tokenSet].map((t) =>
-                        t.toLowerCase()
-                    );
-
-                    // Determine which predefined categories actually apply
-                    const activeCategories = Object.keys(TAG_CATEGORIES).filter(
-                        (cat) =>
-                            TAG_CATEGORIES[cat].some((t) =>
-                                lowerTokens.includes(t)
-                            )
-                    );
-
-                    // Add Misc if there are leftover tokens
-                    const categorized = allCategorizedTokens();
-                    const hasMisc = lowerTokens.some(
-                        (t) => !categorized.has(t)
-                    );
-                    if (hasMisc) activeCategories.push("Misc");
-
-                    activeCategories.forEach((cat) => {
-                        const btn = document.createElement("button");
-                        btn.className =
-                            "project-filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-md";
-                        btn.dataset.category = cat;
-                        btn.textContent = cat;
-                        projectFiltersContainer.appendChild(btn);
-                    });
-                    attachProjectFilterHandlers();
-                }
-
-                function renderProjects(filter = "all", isCategory = false) {
-                    projectsGrid.innerHTML = "";
-                    const sourceProjects = resumeData.projects;
-                    let filtered;
-                    if (filter === "all") {
-                        filtered = sourceProjects;
-                    } else if (isCategory) {
-                        // category filtering: any overlap with category tag list
-                        const allTokens = new Set(
-                            sourceProjects.flatMap((p) =>
-                                p.tech.map((t) => t.toLowerCase())
-                            )
-                        );
-                        const categoryTokens = tokensForCategory(
-                            filter,
-                            allTokens
-                        ).map((t) => t.toLowerCase());
-                        filtered = sourceProjects.filter((p) =>
-                            p.tech.some((t) =>
-                                categoryTokens.includes(t.toLowerCase())
-                            )
-                        );
-                    } else {
-                        filtered = sourceProjects.filter((p) =>
-                            p.tech
-                                .map((t) => t.toLowerCase())
-                                .includes(filter.toLowerCase())
-                        );
-                    }
-                    filtered.forEach((proj) => {
-                        const projEl = document.createElement("div");
-                        projEl.className =
-                            "project-card bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-1 transition-transform duration-300";
-                        projEl.innerHTML = `
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-800">${
-                                proj.url
-                                    ? `<a href="${proj.url}" target="_blank" rel="noopener" class="hover:underline">${proj.name}</a>`
-                                    : proj.name
-                            }</h3>
-                            <p class="mt-2 text-gray-600">${
-                                proj.desc || "No description provided."
-                            }</p>
-                            <div class="mt-4 flex flex-wrap gap-2">
-                                ${proj.tech
-                                    .map(
-                                        (t) =>
-                                            `<span class="bg-gray-200 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">${t}</span>`
-                                    )
-                                    .join("")}
-                            </div>
-                            ${
-                                typeof proj.stars === "number" && proj.stars > 0
-                                    ? `<div class="mt-4 text-xs text-gray-500">⭐ ${proj.stars} stars</div>`
-                                    : ""
-                            }
-                        </div>
-                    `;
-                        projectsGrid.appendChild(projEl);
-                    });
-                }
-
-                function attachProjectFilterHandlers() {
-                    const buttons = projectFiltersContainer.querySelectorAll(
-                        ".project-filter-btn"
-                    );
-                    buttons.forEach((btn) => {
-                        btn.addEventListener("click", () => {
-                            buttons.forEach((b) =>
-                                b.classList.remove("bg-gray-700", "text-white")
-                            );
-                            buttons.forEach((b) =>
-                                b.classList.add("bg-gray-200", "text-gray-800")
-                            );
-                            btn.classList.add("bg-gray-700", "text-white");
-                            btn.classList.remove(
-                                "bg-gray-200",
-                                "text-gray-800"
-                            );
-                            if (btn.dataset.category) {
-                                renderProjects(btn.dataset.category, true);
-                            } else {
-                                renderProjects(btn.dataset.filter || "all");
-                            }
-                        });
-                    });
-                }
-
-                // Initial static filters (from fallback data)
-                rebuildProjectFilters(resumeData.projects);
-                renderProjects();
-
-                async function loadGitHubProjects() {
-                    try {
-                        const resp = await fetch(
-                            `https://api.github.com/users/${GITHUB_USERNAME}/repos?per_page=100&sort=updated`,
-                            {
-                                headers: {
-                                    Accept: "application/vnd.github+json, application/vnd.github.mercy-preview+json",
-                                },
-                            }
-                        );
-                        if (!resp.ok)
-                            throw new Error("GitHub API error: " + resp.status);
-                        const repos = await resp.json();
-                        const filtered = repos.filter(
-                            (r) =>
-                                !r.fork &&
-                                !r.archived &&
-                                r.name.toLowerCase() !==
-                                    `${GITHUB_USERNAME}.github.io`
-                        );
-
-                        // Some APIs may not include topics; prepare secondary fetch when missing.
-                        const needTopicFetch = filtered.filter(
-                            (r) =>
-                                !Array.isArray(r.topics) ||
-                                r.topics.length === 0
-                        );
-                        if (
-                            needTopicFetch.length &&
-                            needTopicFetch.length < 25
-                        ) {
-                            // limit to avoid excessive calls
-                            await Promise.all(
-                                needTopicFetch.map(async (r) => {
-                                    try {
-                                        const tResp = await fetch(
-                                            `https://api.github.com/repos/${GITHUB_USERNAME}/${r.name}/topics`,
-                                            {
-                                                headers: {
-                                                    Accept: "application/vnd.github+json, application/vnd.github.mercy-preview+json",
-                                                },
-                                            }
-                                        );
-                                        if (tResp.ok) {
-                                            const tData = await tResp.json();
-                                            r.topics = tData.names || [];
-                                        }
-                                    } catch (_) {}
-                                })
-                            );
-                        }
-
-                        const mapped = filtered.map((r) => {
-                            const baseLang = r.language ? [r.language] : [];
-                            const topics = Array.isArray(r.topics)
-                                ? r.topics
-                                : [];
-                            // Normalize topics (keep as-is, GitHub already hyphenates)
-                            const tech = [...new Set([...baseLang, ...topics])];
-                            return {
-                                name: r.name,
-                                desc: r.description,
-                                tech: tech.length ? tech : ["Other"],
-                                url: r.html_url,
-                                stars: r.stargazers_count,
-                                updated: r.updated_at,
-                            };
-                        });
-
-                        // Sort by stars desc then recently updated
-                        mapped.sort(
-                            (a, b) =>
-                                b.stars - a.stars ||
-                                new Date(b.updated) - new Date(a.updated)
-                        );
-                        resumeData.projects = mapped;
-                        dynamicProjectsLoaded = true;
-                        rebuildProjectFilters(resumeData.projects);
-                        renderProjects();
-                    } catch (e) {
-                        console.warn(
-                            "Could not load GitHub projects, using fallback. Reason:",
-                            e.message
-                        );
-                    }
-                }
-
-                loadGitHubProjects();
-
-                const certsList = document.getElementById(
-                    "certifications-list"
-                );
-                function issuerBadge(label) {
-                    return `<span class="inline-block bg-blue-100 text-black rounded-md px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide">${label}</span>`;
-                }
-                resumeData.certifications.forEach((cert) => {
-                    const li = document.createElement("li");
-                    li.className = [
-                        "group rounded-lg",
-                        "bg-gray-50",
-                        "backdrop-blur-sm p-3 shadow-sm hover:shadow-md transition-shadow",
-                        "focus-within:ring-2 focus-within:ring-blue-500/60",
-                    ].join(" ");
-
-                    if (typeof cert === "string") {
-                        li.innerHTML = `<p class='font-medium text-sm text-gray-800 dark:text-gray-100'>${cert}</p>`;
-                        certsList.appendChild(li);
-                        return;
-                    }
-
-                    const badgeEl = cert.issuer
-                        ? `<div class='shrink-0 ml-3 self-start'>${issuerBadge(
-                              cert.issuer.split(" ")[0]
-                          )}</div>`
-                        : "";
-
-                    const header = `
-                        <div class='flex items-start justify-between'>
-                            <h4 class='font-semibold text-sm text-gray-900 leading-snug flex-1'>${cert.title}</h4>
-                            ${badgeEl}
-                        </div>`;
-
-                    const metaBits = [];
-                    if (cert.issuer) metaBits.push(cert.issuer);
-                    if (cert.issued) metaBits.push(cert.issued);
-                    if (cert.expires) metaBits.push(`Exp ${cert.expires}`);
-                    const meta = metaBits.length
-                        ? `<p class='text-[11px] text-gray-500 dark:text-gray-400 mt-1'>${metaBits.join(
-                              " · "
-                          )}</p>`
-                        : "";
-                    const id = cert.id
-                        ? `<p class='text-[10px] tracking-wide text-gray-400 dark:text-gray-500 mt-1'>ID: ${cert.id}</p>`
-                        : "";
-                    const action = cert.url
-                        ? `<a href='${cert.url}' target='_blank' rel='noopener' class='mt-3 inline-flex items-center gap-1 text-[11px] font-medium text-blue-600 dark:text-blue-400 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded' aria-label='Show credential for ${cert.title}'>Show credential<span aria-hidden='true'>→</span></a>`
-                        : "";
-
-                    li.innerHTML = header + meta + id + action;
-                    certsList.appendChild(li);
-                });
-
-                // Simple theme toggle
-                const themeToggle = document.getElementById("theme-toggle");
-                const themeIcon = document.getElementById("theme-icon");
-                const html = document.documentElement;
-
-                // Set dark as default BEFORE first chart render
-                const savedTheme = localStorage.getItem("theme");
-                if (savedTheme === "light") {
-                    html.classList.remove("dark");
-                    themeIcon.textContent = "☀️";
-                } else {
-                    html.classList.add("dark");
-                    themeIcon.textContent = "🌙";
-                }
-                // Initial chart render now that theme state is applied
-                renderSkillsChart();
-
-                themeToggle.addEventListener("click", () => {
-                    if (html.classList.contains("dark")) {
-                        html.classList.remove("dark");
-                        themeIcon.textContent = "☀️";
-                        localStorage.setItem("theme", "light");
-                    } else {
-                        html.classList.add("dark");
-                        themeIcon.textContent = "🌙";
-                        localStorage.setItem("theme", "dark");
-                    }
-
-                    // Re-render chart with new colors
-                    if (skillsChart) {
-                        const activeBtn = document.querySelector(
-                            "#skill-filters .bg-gray-700"
-                        );
-                        const filter = activeBtn
-                            ? activeBtn.dataset.filter
-                            : "all";
-                        renderSkillsChart(filter);
-                    }
-                });
-
-                // Gamification: Animate counters
-                function animateCounter(element, target, suffix = '') {
-                    let current = 0;
-                    const increment = target / 100;
-                    const timer = setInterval(() => {
-                        current += increment;
-                        if (current >= target) {
-                            current = target;
-                            clearInterval(timer);
-                        }
-                        element.textContent = Math.floor(current) + suffix;
-                    }, 20);
-                }
-
-                // Animate stats on load
-                setTimeout(() => {
-                    const projectsEl = document.querySelector('.text-blue-600');
-                    animateCounter(projectsEl, 50, '+');
-                    const linesEl = document.querySelector('.text-green-600');
-                    animateCounter(linesEl, 100, 'k+');
-                    // Progress bar
-                    const progressBar = document.querySelector('.bg-gradient-to-r');
-                    progressBar.style.transition = 'width 2s ease';
-                    progressBar.style.width = '100%';
-                }, 500);
-
-                // Unlock quests
-                document.getElementById('unlock-skills').addEventListener('click', () => {
-                    const section = document.getElementById('skills');
-                    section.style.display = 'block';
-                    section.classList.add('animate-fade-in');
-                    // Render chart if not already
-                    if (!skillsChart) renderSkillsChart();
-                    section.scrollIntoView({ behavior: 'smooth' });
-                });
-                document.getElementById('unlock-experience').addEventListener('click', () => {
-                    const section = document.getElementById('experience');
-                    section.style.display = 'block';
-                    section.classList.add('animate-fade-in');
-                    section.scrollIntoView({ behavior: 'smooth' });
-                });
-                document.getElementById('unlock-projects').addEventListener('click', () => {
-                    const section = document.getElementById('projects');
-                    section.style.display = 'block';
-                    section.classList.add('animate-fade-in');
-                    section.scrollIntoView({ behavior: 'smooth' });
-                });
-                document.getElementById('unlock-education').addEventListener('click', () => {
-                    const section = document.getElementById('education');
-                    section.style.display = 'block';
-                    section.classList.add('animate-fade-in');
-                    section.scrollIntoView({ behavior: 'smooth' });
-                });
-
-                // Nav links to unlock sections
-                document.querySelector('a[href="#skills"]').addEventListener('click', (e) => {
-                    e.preventDefault();
-                    document.getElementById('unlock-skills').click();
-                });
-                document.querySelector('a[href="#experience"]').addEventListener('click', (e) => {
-                    e.preventDefault();
-                    document.getElementById('unlock-experience').click();
-                });
-                document.querySelector('a[href="#projects"]').addEventListener('click', (e) => {
-                    e.preventDefault();
-                    document.getElementById('unlock-projects').click();
-                });
-                document.querySelector('a[href="#education"]').addEventListener('click', (e) => {
-                    e.preventDefault();
-                    document.getElementById('unlock-education').click();
-                });
-            });
-        </script>
+            <footer class="doc-footer">
+                Last updated January 2026
+                <span class="doc-footer-right">
+                    <a href="/work">Other work</a>
+                </span>
+            </footer>
+        </main>
     </body>
 </html>
